@@ -1,0 +1,47 @@
+<!--pages/me/me.wxml-->
+<view class='wrap'>
+  <view class='box'>
+    <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/mobile/images/bg.jpg'></image>
+  </view>
+
+  <view class='content center pt60'>
+    <view class='avator'>
+      <image src='http://cdn.phi-block.com/templates/mobile/images/gr.png'></image>
+    </view>
+
+    <view class='center nickname'>
+      <text>请先登录</text>
+    </view>
+
+    
+
+  </view>
+
+  <view class='me-item' bindtap='myorder' data-type='0'>
+      <text class='icon icon-order'></text><text class='t'>我的订单</text>
+      <text class='left'>查看全部订单<text class='icon left-icon'></text></text>
+  </view>
+
+  <view class='pay'>
+    <view bindtap='myorder' data-type='1'>
+      <text class='icon icon-notpay' ></text><text class='t'>未付款</text>
+    </view>
+    <view bindtap='myorder' data-type='3'>
+      <text class='icon icon-pay'></text><text class='t'>已付款</text>
+    </view>
+  </view>
+
+  <view class='me-item' bindtap='goPath' data-path='../address/address'>
+      <text class='icon icon-address'></text><text class='t'>收货地址</text>
+      <text class='left icon left-icon'></text>
+  </view>
+  <view class='me-item' bindtap='goPath' data-path='../info/info'>
+      <text class='icon icon-me'></text><text class='t'>个人信息</text>
+      <text class='left icon left-icon'></text>
+  </view>
+  <view class='me-item' bindtap='goPath' data-path='../password/password'>
+      <text class='icon icon-pwd'></text><text class='t'>修改密码</text>
+      <text class='left icon left-icon'></text>
+  </view>
+
+</view>

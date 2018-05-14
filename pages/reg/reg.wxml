@@ -1,0 +1,38 @@
+<!--pages/reg/reg.wxml-->
+
+<view class='wrap'>
+  <image class='fill-img' src='http://cdn.phi-block.com/templates/mobile/images/login_bg.jpg'></image>
+
+  <view class='content'>
+    <view class='title center'>
+      <text>注册</text>
+    </view>
+
+    <view class='input-group'>
+      <text class='icon icon-user'></text>
+      <input id='username' class='input' placeholder='手机号' placeholder-style='color:#757575;font-size:32rpx;'></input>
+    </view>
+    <view class='input-group'>
+      <text class='icon icon-user'></text>
+      <input id='username' class='input' placeholder='验证码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+    </view>
+    <view class='input-group'>
+      <text class='icon icon-user'></text>
+      <input id='username' class='input' placeholder='短信验证码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+    </view>
+
+    <view class='input-group'>
+      <text class='icon icon-pwd'></text>
+      <input id='username' type='password' class='input' placeholder='密码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+    </view>
+    <view class='input-group'>
+      <text class='icon icon-pwd'></text>
+      <input id='username' type='password' class='input' placeholder='确认密码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+    </view>
+
+    <button class='btn login'>创建账号</button>
+    <button class='btn reg'>返回登录</button>
+
+  </view>
+</view>
+

@@ -1,0 +1,21 @@
+<!--pages/address/address.wxml-->
+<view>
+  <view>
+    <block wx:for='{{ address }}'>
+      <view class='address-item'>
+        <view class='item-top'>
+          <text>{{ item.name}}</text><text>{{ item.phone}}</text>
+        </view>
+        <view class='item-bottom'>
+          <text>{{ item.isDefault?"[默认]":""}}</text><text>{{ item.address}}</text>
+        </view>
+
+        <text class='icon right-icon'></text>
+      </view>
+    </block>
+  </view>
+
+  <view class='add'>
+    <text bindtap='add'><text class='icon icon-add'></text>添加新地址</text>
+  </view>
+</view>

@@ -1,0 +1,131 @@
+/* pages/home/home.wxss */
+
+swiper{
+  height: 312rpx;
+}
+.c8n1{
+  position: relative;
+}
+.c8n1-product{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 100rpx;
+}
+.c8n1-product .pro{
+  float: left;
+}
+.c8n1-product .pro1{
+  width: 40%;
+  margin-left: 11.5%;
+}
+.c8n1-product .pro2{
+  width: 33%;
+  margin-left: 8%;
+}
+.h1{
+  margin: 25rpx 0;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0;
+}
+.h1 text{
+  color: #4d4d4d;
+}
+.buy-process{
+   background: #fff;
+   padding-top: 30rpx;
+}
+.process{
+  padding: 0 30rpx;
+  padding-bottom: 30rpx;
+ 
+}
+.process-item{
+  padding: 25rpx 0;
+  width: 100%;
+  background: #f1f1f1;
+}
+.white{
+  background: #fff;
+}
+.process-item view{
+  float: left;
+}
+.process .icon{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+.process .num{
+  border: 0;
+  font-family: AGENCYB;
+  line-height: 80rpx;
+  text-align: center;
+  color: #808080;
+  font-size: 44rpx;
+}
+.step{
+  height: 100%;
+  color: #808080;
+  font-size: 24rpx;
+  
+  line-height: 80rpx;
+  padding-left: 5rpx;
+}
+.news{
+  padding: 30rpx;
+  background: #1b1b1b;
+}
+.h2{
+  margin-bottom: 25rpx;
+  text-align: center
+}
+.h2 text{
+  color: #fff;
+}
+.news-item{
+  margin-bottom: 10rpx;
+  position: relative;
+}
+.item{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+}
+.pd30{
+  padding: 30rpx;
+}
+.pt50{
+  padding-top: 30%;
+}
+.p{
+  display: block;
+  text-overflow: ellipsis;
+}
+
+.news .title{
+  font-size: 28rpx;
+}
+.news .desc{
+  font-size: 24rpx;
+  color: #f1f1f1;
+  font-weight: 300;
+}
+.news .p text{
+  float: right;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  font-weight: 300;
+}
+.more-news{
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  margin-top: 30rpx;
+}

@@ -1,0 +1,215 @@
+<!--pages/n1m/n1m.wxml-->
+<scroll-view class='wrapper-scroll' scroll-y = 'true'>
+  <text class='buy'><text class='icon shopcart'></text>立即购买</text>
+  <view class='n1m'>
+     <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/phone_pro_banner2.gif'></image>
+  </view>
+  <view class='bg'>
+    <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/phone_cp_img004.gif'></image>
+  </view>
+
+  <view class='intro'>
+    <view class='intro-item'>
+      <view class='title'>
+        <text>成就白金奖励计划</text>
+      </view>
+      <view class='p'>
+        <text>针对斐讯新一代区块链智能硬件产品天天链专属打造的奖励计划，鼓励用户共享家庭闲置的存储空间、网络带宽、计算资源。</text>
+      </view>
+      <view class='p'>
+        <text>用户闲置资源通过区块链技术接入专业的云计算平台，转化为弹性计算、存储与网络资源池，为社会贡献更优性价比的计算、存储、网络加速等一系列云计算业务，同时降低重复建设所导致的资源浪费。</text>
+      </view>
+
+      <view class='tomore'>
+        <text class='more-btn'>了解白金奖励计划<text class='icon more'></text></text>
+      </view>
+    </view>
+
+    <view class='intro-item'>
+      <view class='title'>
+        <text>现在开始“日日赢”</text>
+      </view>
+      <view class='p'>
+        <text>以区块链创新技术实现闲置资源的共享，获得的数字资产为“日日赢” （DDW），可用于兑换云服务，网络加速服务，数字娱乐内容服务，以及斐讯生态链中的其他产品。</text>
+      </view>
+      <view class='p'>
+        <text>随着共享经济云计算和区块链技术的发展，日日赢会陆续呈现更多应用场景。</text>
+      </view>
+    </view>
+    <view class='tomore'>
+      <text class='more-btn'>了解日日赢<text class='icon more'></text></text>
+    </view>
+  </view>
+
+  <view class='box clearfix'>
+    <block wx:for='{{ operatings }}'>
+      <view class='operating {{index%2 == 0? "mr2":""}}'>
+        <view class='top-img'>
+          <image class='img' mode='widthFix' src='{{ item.icon }}'></image>
+        </view>
+        <view>
+          <text class='step-index'>{{ "0" + (index+1) }}</text>
+        </view>
+        <view>
+          <text class='step-name'>{{ item.step_name }}</text>
+        </view>
+        <view>
+          <text class='step-desc'>{{ item.step_desc}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class='intro1'>
+    <view>
+      <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/pro2_bg.gif'></image>
+    </view>
+    <view class='n1m-img'>
+      <image mode='widthFix' class='img1' src='http://cdn.phi-block.com/templates/default/images/cp_img.png'></image>
+    </view>
+
+    <view class='content pt40'>
+      <view class='title'>
+        <text>强大的挖矿性能</text>
+      </view>
+      <view class='list-act clearfix'>
+        <block wx:for="{{ act_list }}">
+          <view class='act-item'>
+            <image class='img3' mode='widthFix' src='{{ item.img }}'></image>
+            <view>
+              <text>{{ item.text }}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='intro1'>
+    <view style='height:680rpx'>
+      <image class='fill-img' src='http://cdn.phi-block.com/templates/default/images/pro2_bg2.gif'></image>
+      
+    </view>
+    
+    <view class='content'>
+      <view class='title'>
+        <text>强大的后端保障</text>
+      </view>
+      <view class='center-p'>
+        <text>到2021年，斐讯云计算数据中心业务规模达到30万个机柜、60万台服务器</text>
+      </view>
+      <view style='margin-top:60rpx;'>
+        <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/phone_cp_img02.png'></image>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='intro1'>
+    <view style='height:1630rpx;'>
+      <image class='fill-img' src='http://cdn.phi-block.com/templates/default/images/pro2_bg3.jpg'></image>
+    </view>
+    <view class='content'>
+      <view class='title'>
+        <text>一步，托管N1M至斐讯自建数据中心，即享专属服务</text>
+      </view>
+      <view class='center-p'>
+        <text>买了N1M不知道如何部署怎么办？不清楚如何更多更快的挖矿怎么办？家里如果有多台设备，就需要多条带宽，家里的带宽不够用怎么办？没有多余的精力来运行维护怎么办？不用担心，一步托管N1M至斐讯自建数据中心，即享专属服务，省时省心，轻松收益日日赢！</text>
+      </view>
+      <view class='clearfix' style='margin-top:30rpx;'>
+        <block wx:for='{{ services }}'>
+          <view class='serivce-item {{ index%2==0 ? "mrdot5" : "" }}'>
+            <image class='service-icon' src='{{ item.img }}'></image>
+            <view class='service-title ellipsis'>
+              <text>{{ item.title }}</text>
+            </view>
+            <view class='service-desc'>
+              <text>{{ item.desc }}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      
+
+    </view>
+  </view>
+
+  <view class='intro1'>
+    <view style='width:100%;height:410rpx;'>
+      <image src='http://cdn.phi-block.com/templates/default/images/pro2_bg4.jpg' class='fill-img'></image>
+    </view>
+
+    <view class='content pt40'>
+      <view class='title'>
+        <text>由天天链N1M加入白金奖励计划需具备以下条件</text>
+      </view>
+      <view class='center-p t1'>
+        <text>0元购购买不设上限</text>
+      </view>
+      <view class='center-p t1 t2'>
+        <text>接受每台N1M托管至斐讯自建云数据中心</text>
+      </view>
+      <view class='center-p t1 t2'>
+        <text>承诺不通过ROOT、欺骗等手段破解天天链N1M</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='intro'>
+    <view class='title title1' style=' margin-bottom: 80rpx;'>
+      <text>产品直接托管 让你放心放手</text>
+    </view>
+
+    
+    <view class='p-box'>
+      <text class='p-box-title'>N1M产品包</text>
+      <text style='color:#333;'>N1M（1099元）+云盘VIP（399元）+硬盘（999元）=2497元</text>
+      <text>注：N1M为天天链设备，云盘为2T斐讯云盘VIP，硬盘空间为1T。</text>
+      
+    </view>
+
+    <view class='p-box'>
+      <text class='p-box-title'>售后服务</text>
+      <text>1.NIM 一经部署无法退换货；</text>
+      <text>2.保修期1 年，保修期内设备故障，联系矿场</text>
+      <text>3.3小时内完成备机更换 </text>
+    </view>
+
+    <view class='p-box'>
+      <text class='p-box-title'>退出托管</text>
+      <text>1.停止缴纳托管费，则次月停止挖矿；</text>
+      <text>2.用户也可提前15个工作日预约自行取回设备或申请寄回，运保费到付自理；</text>
+      <text>3.矿机版N1M出矿区后，将无法挖矿 </text>
+    </view>
+
+  </view>
+
+  <view class='intro1'>
+    <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/phone_cp_img003.gif'></image>
+  </view>
+
+  <view class='intro'>
+    <view class='title'>
+      <text>常见问题</text>
+    </view>
+
+    <view>
+      <block wx:for='{{ quetions }}'> 
+        <view class='question-item'>
+            <view>
+              <text class='ask'><text class='icon ask-icon'></text>{{item.ask}}</text>
+            </view>
+            <view>
+              <text class='answer'><text class='icon answer-icon'></text>{{item.answer}}</text>
+            </view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+
+  
+
+</scroll-view>

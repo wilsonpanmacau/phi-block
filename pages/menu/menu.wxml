@@ -1,0 +1,39 @@
+<!--pages/menu/menu.wxml-->
+<view>
+  <view class='menu-item {{ product.icon}}' data-type='1' bindtap='click'>
+    <text class='icon icon-arrow'></text>
+    <text>产品</text>
+  </view>
+  <view class='toolbar {{ product.list }}' >
+    <view data-path='../n1m/n1m' bindtap='goPath'><text>N1M</text></view>
+    <view data-path='../c8/c8' bindtap='goPath'><text>C8</text></view>
+  </view>
+  <view class='menu-item {{ service.icon }}' data-type='2' bindtap='click'>
+    <text class='icon icon-arrow'></text>
+    <text>托管服务</text>
+  </view>
+  <view class='toolbar {{ service.list }}'>
+    <view><text>N1M</text></view>
+    <view><text>C8</text></view>
+  </view>
+  <view class='menu-item {{ plan.icon}}' data-type='3' bindtap='click'>
+    <text class='icon icon-arrow'></text>
+    <text>白金奖励计划</text>
+  </view>
+  <view class='toolbar {{ plan.list }}'>
+    <view><text>白金奖励计划</text></view>
+    <view><text>日日赢矿机</text></view>
+  </view>
+  <view class='menu-item'>
+    <text>服务支持</text>
+  </view>
+  <view class='menu-item'>
+    <text>关于我们</text>
+  </view>
+  <view class='menu-item'>
+    <text>新闻动态</text>
+  </view>
+  <view class='menu-item'>
+    <text>联系我们</text>
+  </view>
+</view>

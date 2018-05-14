@@ -1,0 +1,98 @@
+/* pages/me/me.wxss */
+.box{
+  position: relative;
+}
+.content{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  border-bottom: 0;
+}
+.pt60{
+  padding-top: 11%;
+}
+.center{
+  text-align: center;
+}
+.avator{
+  display: inline-block;
+  width: 124rpx;
+  height: 124rpx;
+  border-radius: 62rpx;
+  border: 1px solid #fff;
+  padding-top: 2rpx;
+}
+.avator image{
+  width: 120rpx;
+  height: 120rpx;
+  vertical-align: top;
+}
+.nickname{
+  font-size: 30rpx;
+  color: #fff;
+  margin-top: 20rpx;
+}
+.me-item{
+  padding: 0 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #efefef;
+  position: relative;
+}
+.me-item .icon{
+  color: #4395e5;
+  margin-right: 15rpx;
+}
+.me-item .t{
+  font-size: 28rpx;
+  color: #666;
+}
+.icon-order::after{
+  content: '\e622';
+}
+.icon-address::after{
+  content: '\e657';
+}
+.icon-me::after{
+  content: '\e621';
+}
+.icon-pwd::after{
+  content: '\e664';
+}
+.pay{
+  height: 80rpx;
+  border-bottom: 30rpx solid #efefef;
+}
+.pay>view{
+  width: 50%;
+  float: left;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+.pay>view .icon{
+  margin-right: 10rpx;
+  font-size: 36rpx;
+  color: #666;
+}
+.icon-notpay::after{
+  content: '\e626';
+}
+.icon-pay::after{
+  content: '\e628';
+}
+.left{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  font-size: 28rpx;
+}
+.left-icon::after{
+  content: '\e64a';
+}
+.me-item .left{
+  color: #aaa;
+}

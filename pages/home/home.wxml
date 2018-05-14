@@ -1,0 +1,61 @@
+<!--pages/home/home.wxml-->
+<view>
+  <swiper indicator-dots='{{ swiper.indicatorDots}}' indicator-color='{{ swiper.indicatorColor}}' indicator-active-color='{{ swiper.indicatorActiveColor}}' autoplay='{{ swiper.autoplay }}' interval='{{ swiper.interval }}' circular='{{ swiper.circular }}'>
+    <block wx:for='{{ imgUrls }}'>
+    <swiper-item>
+      <image src='{{ item }}' mode='widthFix' class='img'></image>
+    </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='c8n1'>
+    <image src='http://cdn.phi-block.com/templates/default/images/home_pro_bg.jpg' class='img' mode='widthFix'></image>
+    <view class='c8n1-product'>
+      <view class='pro pro1' data-url="/n1m/n1m" bindtap='go'>
+        <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/home_pro1.png'></image>
+      </view>
+      <view class='pro pro2' data-url="/c8/c8" bindtap='go'>
+        <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/home_pro02.png'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 购买及托管流程  -->
+  <view class='buy-process'>
+    <view class='h1'>
+      <text>购买及托管流程</text>
+    </view>
+    <view class='process'>
+      <block wx:for='{{ process }}'>
+        <view class='process-item clearfix {{index%2==1?"white":""}}'>
+          <view class='icon'>
+            <image src='{{ item.icon }}' class='img' mode='widthFix'></image>
+          </view>
+          <view class='icon num'>
+            <text>{{ "0" + (index+1) }}</text>
+          </view>
+          <text class='step'>{{ item.step }}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class='news'>
+    <view class='h2'>
+      <text>公司新闻</text>
+    </view>
+    <block wx:for='{{ news }}'>
+      <view class='news-item'>
+        <image class='img' mode='widthFix' src='{{ item.img }}'></image>
+        <view class='item pt50 pd30'>
+          <text class='p ellipsis title'>{{ item.title }}</text>
+          <text class='p ellipsis desc'>{{ item.desc }}</text>
+          <text class='p date'><text>{{ item.date }}</text></text>
+        </view>
+      </view>
+    </block>
+
+    <view class='more-news'><text>查看更多</text></view>
+
+  </view>
+
+</view>

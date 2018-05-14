@@ -1,0 +1,67 @@
+/* pages/login/login.wxss */
+.wrap,.content{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.content{
+  padding: 0 60rpx;
+  padding-top: 60rpx;
+}
+.title{
+  color: #fff;
+  font-size: 40rpx;
+}
+.center{
+  text-align: center;
+}
+.input-group{
+  height: 64rpx;
+  position: relative;
+  margin-top: 60rpx;
+}
+.input-group input{
+  color: #fff;
+  height: 100%;
+  border-bottom: 1px solid #757575;
+  padding: 0 64rpx;
+}
+.input-group .icon{
+  position: absolute;
+  display: block;
+  height: 64rpx;
+  width: 64rpx;
+  left: 0;
+  top: 0;
+  color: #ccc;
+}
+.input-group .icon::after{
+  text-align: center;
+  line-height: 64rpx;
+}
+.icon-user::after{
+  content: '\e653';
+}
+.icon-pwd::after{
+  content: '\e63e';
+}
+.btn{
+  margin-top: 30rpx;
+  color: #fff;
+}
+.login{
+  background: #348ce6;
+}
+.reg{
+  background: #2b3151;
+}
+.forget{
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #757575;
+}
+.forget text{
+  float: right;
+}

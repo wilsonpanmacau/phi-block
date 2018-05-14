@@ -1,0 +1,9 @@
+<!--pages/order/order.wxml-->
+
+<view class='menu'>
+  <block wx:for='{{ menu_list }}'>
+    <view class='menu_item {{ item.style }}'>
+      <text data-index='{{ index }}' bindtap='select' class='{{index == active_index ? "active":""}}'>{{ item.text }}</text>
+    </view>
+  </block>
+</view>

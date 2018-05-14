@@ -1,0 +1,30 @@
+/* pages/addAddress/addAddress.wxss */
+.label{
+  width: 150rpx;
+  float: left;
+  font-size: 30rpx;
+  color: #444;
+  vertical-align: middle;
+  display: inline-block;
+  padding-top: -1rpx;
+}
+.input-group{
+  padding:30rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.input,.pla{
+  color: #888;
+  font-size: 30rpx;
+  vertical-align: middle;
+}
+.add{
+  height: 140rpx;
+  line-height: 140rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+}
+.add text{
+  background: #348ce6;
+  padding: 10rpx 30rpx;
+}

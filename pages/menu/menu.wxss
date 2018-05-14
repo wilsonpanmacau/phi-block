@@ -1,0 +1,48 @@
+/* pages/menu/menu.wxss */
+.menu-item{
+  padding: 30rpx;
+  border-bottom: 2rpx solid #f1f1f1;
+  font-size: 32rpx;
+  color: #333;
+  background: #fff;
+}
+.toolbar{
+  font-size: 30rpx;
+  color: #666;
+  box-sizing: border-box;
+  transition: height 0.3s;
+}
+.toolbar view{
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 60rpx;
+  border-bottom: 2rpx solid #f1f1f1;
+  background: #f8f8f8;
+  transform-origin: 0 0;
+  
+}
+.icon{
+  margin-right: 4rpx;
+}
+.icon-arrow::after{
+  transition: all 0.3s;
+  content: '\e64a';
+  display: inline-block;
+  transform: rotate(0deg);
+}
+.open .icon-arrow::after{
+  transform: rotate(90deg);
+}
+.hide{
+  height: 0;
+}
+.show{
+  height: auto;
+}
+.hide view{
+  transform: scaleY(0);
+}
+.show view{
+  transition: all 0.3s;
+  transform: scaleY(1);
+}

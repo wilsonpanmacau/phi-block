@@ -1,0 +1,23 @@
+<!--pages/info/info.wxml-->
+<view>
+  <view>
+    <view class='item clearfix'>
+      <text style='display:inline-block;padding-top:15rpx;'>头像</text>
+      <image src='http://cdn.phi-block.com/templates/mobile/images/gr.png'></image>
+    </view>
+    <view class='item'>
+      <text>昵称</text>
+      <text>马画藤</text>
+    </view>
+    <view class='item'>
+      <text>生日</text>
+      <text>1981-12-23</text>
+    </view>
+    <view class='item'>
+      <text>性别</text>
+      <text>男</text>
+    </view>
+  </view>
+  <button class='btn' bindtap='edit'>修改信息</button>
+  
+</view>

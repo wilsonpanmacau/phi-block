@@ -1,0 +1,2 @@
+/* pages/forget/forget.wxss */
+@import '../login/login.wxss';

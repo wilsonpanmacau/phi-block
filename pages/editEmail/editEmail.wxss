@@ -1,0 +1,2 @@
+/* pages/editEmail/editEmail.wxss */
+@import "../editPhone/editPhone.wxss";

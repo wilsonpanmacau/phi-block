@@ -1,0 +1,21 @@
+/* pages/editPhone/editPhone.wxss */
+@import '../editPassword/editPassword.wxss';
+
+.aa{
+  text-align: center;
+  font-size: 30rpx;
+  padding: 0 30rpx;
+  padding-bottom: 30rpx;
+}
+.aa .phone{
+  color: #348ce6;
+}
+.sendCode{
+  background: #348ce6;
+  color: #fff;
+  font-size: 26rpx;
+  padding: 10rpx 30rpx;
+  position: absolute;
+  right: 0;
+  bottom: 55rpx;
+}

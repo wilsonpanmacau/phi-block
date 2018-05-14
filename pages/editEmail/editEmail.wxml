@@ -1,0 +1,20 @@
+<!--pages/editEmail/editEmail.wxml-->
+<view class='content'>
+  <view class='aa'>
+    <text>点击发送短信按钮，将会发送一条有验证码的短信至手机<text class='phone'>183*****414</text></text>
+  </view>
+  <view class='input-group'>
+    <label>验证码</label>
+    <input type='password' class='padleft' placeholder='输入验证码'></input>
+    <text class='sendCode'>发送验证码</text>
+  </view>
+  <view class='input-group'>
+    <label>新邮箱</label>
+    <input type='password' placeholder='输入新邮箱'></input>
+  </view>
+  <view class='btns'>
+    <button class='a' bindtap='edit'>绑定新邮箱</button>
+    <button bindtap='edit' bindtap='cancel'>取消</button>
+  </view>
+</view>
+

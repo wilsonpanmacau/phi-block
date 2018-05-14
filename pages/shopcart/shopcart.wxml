@@ -1,0 +1,43 @@
+<!--pages/shopcart/shopcart.wxml-->
+<block wx:if='{{ products.length === 0}}'>
+  <view class='nothing'>
+    <text class='icon nothing-icon'></text>
+    <text>你的购物车空空如也</text>
+  </view>
+</block>
+<block wx:else>
+  <scroll-view class='scroll' scroll-y='true'>
+  <block wx:for='{{ products }}'>
+
+    <view class='item clearfix'>
+      <view class='pro-img'>
+        <image mode='widthFix' class='img' src='{{ item.src }}'></image>
+      </view>
+
+      <view class='wenzi'>
+        <view class='name'><text>{{ item.name }}</text></view>
+        <view class='price'><text>售价：{{ item.price }}元</text></view>
+        <view class='adddelete'>
+          <text bindtap='deletea' data-index='{{ index }}'>-</text>
+          <input type='number' value='{{ item.count}}'></input>
+          <text bindtap='add' data-index='{{ index }}'>+</text>
+        </view>
+      </view>
+
+      <text wx:if="{{ item.isSelect }}" class='icon icon1 icon-select' bindtap='select' data-index='{{ index }}'></text>
+      <text  wx:else class='icon icon1 icon-noselect' bindtap='select' data-index='{{ index }}'></text>
+      <text class='icon icon2 icon-delete' bindtap='deleteProduct' data-index='{{ index }}'></text>
+
+    </view>
+  </block>
+  </scroll-view>
+  <view class='bottom'>
+    <view class='b-content'>
+      <text wx:if="{{ isAllSelect }}" class='icon icon1 icon-select' bindtap='allselect'></text>
+      <text  wx:else class='icon icon1 icon-noselect' bindtap='allselect'></text>
+      <text>全选</text>
+      <text class='total_money'>产品总额：{{ total }}元</text>
+    </view>
+    <view class='btn-pay'><text>去结算</text></view>
+  </view>
+</block>

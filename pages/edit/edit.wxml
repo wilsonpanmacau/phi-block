@@ -1,0 +1,33 @@
+<!--pages/edit/edit.wxml-->
+<view>
+  <view>
+    <view class='item clearfix'>
+      <text style='display:inline-block;padding-top:15rpx;'>头像</text>
+      <image bindtap='choose' src='{{ src }}'></image>
+    </view>
+    <view class='item'>
+      <text>昵称</text>
+      <input value='马画藤'></input>
+    </view>
+    <view class='item'>
+      <text>生日</text>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="picker">{{date}}</view>
+      </picker>
+    </view>
+    <view class='item'>
+      <text>性别</text>
+      <radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+    </view>
+  </view>
+  <view class='btns'>
+    <button class='a' bindtap='edit'>保存</button>
+    <button bindtap='edit' bindtap='cancel'>取消</button>
+  </view>
+  
+</view>
+

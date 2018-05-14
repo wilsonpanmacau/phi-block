@@ -1,0 +1,136 @@
+/* pages/shopcart/shopcart.wxss */
+.scroll{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 80rpx;
+}
+
+.nothing{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fafafa;
+  color: #999;
+}
+.nothing-icon::after{
+  content: '\e614';
+  font-size: 160rpx;
+}
+.nothing text:nth-child(2){
+  font-size: 32rpx;
+  margin-top: 20rpx;
+}
+.item{
+  padding: 30rpx;
+  padding-left: 110rpx;
+  padding-right: 110rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f1f1f1;
+  position: relative;
+}
+.pro-img{
+  width: 140rpx;
+  float: left;
+  height: 140rpx;
+  border: 1px solid #666;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.wenzi{
+  width: 100%;
+  padding-left: 170rpx;
+  font-size: 26rpx;
+}
+.name,.price{
+  height: 45rpx;
+}
+.price{
+  color: #888;
+}
+.adddelete{
+  width: 200rpx;
+  border: 1px solid #666;
+  height: 50rpx;
+}
+.adddelete text{
+  display: block;
+  float: left;
+  width: 50rpx;
+  text-align: center;
+  line-height: 44rpx;
+  font-size: 32rpx;
+}
+.adddelete input{
+  float: left;
+  width: 100rpx;
+  text-align: center;
+  font-size: 26rpx;
+  height: 50rpx;
+}
+.item .icon{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.icon-noselect::after{
+  content: '\e63f';
+}
+
+.icon-select::after{
+  content: '\e63d';
+}
+.icon-delete::after{
+  content: '\e61a';
+}
+.item>.icon1{
+  color: #348ce6;
+  left: 35rpx;
+}
+.item>.icon2{
+  right: 35rpx;
+  color: #888;
+}
+.bottom{
+  height: 80rpx;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding-right: 220rpx;
+}
+.b-content{
+  height: 100%;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+.b-content .icon{
+  margin-right: 10rpx;
+  color: #348ce6;
+}
+.b-content .total_money{
+  float: right;
+}
+.btn-pay{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 220rpx;
+  height: 100%;
+  background: #348ce6;
+  color:#fff;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 26rpx;
+}

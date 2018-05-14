@@ -1,0 +1,214 @@
+<!--pages/c8/c8.wxml-->
+<scroll-view class='wrapper-scroll' scroll-y = 'true'>
+  <text class='buy'><text class='icon shopcart'></text>立即购买</text>
+  <view>
+    <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/phone_pro_banner01.jpg'></image>
+  </view>
+
+  <view class='intro'>
+    <view class='title' style='color:#333333;'>
+      <text>拥抱未来  无限价值</text>
+    </view>
+
+    <view class='p'>
+      <text>斐讯以太矿机服务器C8是一款专业的以太坊（ETH）矿机,以太坊于2013年创世纪，是受比特币启发诞生的新一代区块链技术，也称为区块链2.0,目前是市值第二高的加密数字资产，仅次于比特币。</text>
+    </view>
+
+    <view class='p'>
+      <text>以太坊平台拥有强大的基础架构与稳定的开发社群，是区块链技术的先行者。其智能合约3.0将于2018年发布，届时，将有更多的以太坊应用诞生，而现有的以太坊（ETH）都将作为新应用的“燃料”，助力区块链应用创造更多价值。</text>
+    </view>
+
+    <view>
+      <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/cp_img7.jpg'></image>
+    </view>
+  </view>
+
+  <view class='intro1'>
+    <view style='height:720rpx;'>
+      <image class='fill-img' src='http://cdn.phi-block.com/templates/default/images/pro_bg3.jpg'></image>
+    </view>
+
+    <view class='content pdt60 pdb60'>
+      <view class='title no-center white'>
+        <text>安全可靠的底层硬件平台</text>
+      </view>
+      <view class='white how'>
+        <text><text class='icon star-icon'></text>Intel Celeron J1900 四核 2.0GHz</text>
+      </view>
+      <view class='white how'>
+        <text><text class='icon star-icon'></text>8 暴力风扇</text>
+      </view>
+
+      <view style='margin-top:45rpx;'>
+        <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/cp_img8.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='intro1 pd30'>
+      <view class='title no-center' style='color:#333333;'>
+        <text>简单方便的挖矿体验</text>
+      </view>
+      <view class='how' style='color:#666;'>
+        <text>专业级挖矿软件 |  简单操作体验</text>
+      </view>
+      <view style='margin-top:45rpx;'>
+        <image mode='widthFix' class='img' src='http://cdn.phi-block.com/templates/default/images/cp_img09.png'></image>
+      </view>
+  </view>
+
+  <view class='intor1'>
+    <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/phone_cp_img6.jpg'></image>
+  </view>
+
+  <view class='intro'>
+    <view>
+      <block wx:for='{{ config }}'>
+        <view class='config-item'>
+          <view class='config-name'><text>{{ item.name }}</text></view>
+          <view class='config-desc {{ index%2 == 1 ? "config-desc-white":"" }}'><text>{{ item.desc }}</text></view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class='intro1'>
+    <view style='height:1900rpx;'>
+      <image class='fill-img' src='http://cdn.phi-block.com/templates/default/images/pro2_bg3.jpg'></image>
+    </view>
+    <view class='content white'>
+      <view class='title'>
+        <text>一站式矿机托管，数据中心级保障</text>
+      </view>
+      <view class='center-p' style='font-size:28rpx;'>
+        <text>一站式服务 | 24*365监控 | 企业级矿机保养</text>
+      </view>
+      <view class='center-p' style='font-size:28rpx;'>
+        <text>托管费用：1500元/台/月</text>
+      </view>
+      <view class='clearfix' style='margin-top:30rpx;'>
+        <block wx:for='{{ services }}'>
+          <view class='serivce-item {{ index%2==0 ? "mrdot5" : "" }}'>
+            <image class='service-icon' src='{{ item.img }}'></image>
+            <view class='service-title ellipsis'>
+              <text>{{ item.title }}</text>
+            </view>
+            <view class='service-desc'>
+              <text>{{ item.desc }}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      
+      <view class='c8-bottom'>
+        <text><text class='icon more-icon'></text>购买斐讯服务器之后，将服务器托管在斐讯专业矿场。</text>
+        <text><text class='icon more-icon'></text>客户在下订单时需提供联系方式、邮箱、钱包地址。</text>
+        <text><text class='icon more-icon'></text>用户每时每刻可以在矿池查询自己矿机的收益、工作状态。斐讯工作人员24小时排查，处理故障。</text>
+        <text><text class='icon more-icon'></text>专业易用的系统支持、专业的技术人员服务，省心操作、省力挖矿、售后无忧。</text>
+      </view>
+
+    </view>
+
+    
+  </view>
+
+  <view class='intro'>
+    <view class='title' style='color:#333333;'>
+      <text>锁定风险的以太坊托管</text>
+    </view>
+    <view class='how' style='color:#666; text-align:center'>
+      <text>币价保底5000 | 随时随地提币</text>
+    </view>
+
+    <view class='clearfix'>
+      <block wx:for='{{ money }}'>
+        <view class='money-item'>
+           
+          <text class='index'>{{ 1 + index}}</text>
+          
+          <image mode='widthFix' src='{{ item.img }}'></image>
+          <view>
+            <text>{{ item.text }}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <view class='chengnuo'>
+      <view>
+        <text>ETH≤5000RMB/个时，以5000RMB/个的币价保底</text>
+      </view>
+      <view>
+        <text>ETH＞5000RMB/个时，大于5000的部分四六分成</text>
+      </view>
+    </view>
+
+    <view class='att'>
+      <text>注1：ETH价格以</text><image style='width:66rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/gl06.jpg'></image><text>实时价格为准。</text>
+    </view>
+
+    <view class='att'>
+      <text>注2：以太坊托管服务由</text><image style='width:166rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/gl07.jpg'></image><text>合作伙伴提供，斐讯担保。</text>
+    </view>
+
+  </view>
+
+  <view>
+    <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/phone_cp_img04.jpg'></image>
+  </view>
+
+
+  <view class='intro'>
+    <view class='title' style='color:#333333;'>
+      <text>售后政策</text>
+    </view>
+
+    <view class='p-title'>
+      <text>1、保修服务</text>
+    </view>
+
+    <view class='p'>
+      <text>a.自产品到货签收之日起算365天，斐讯将为您所购买的产品，提供免费整机保修服务。保修期内产品若出现故障，直接更换备机，待故障产品维修完成，再切换回来，使客户损失降到最小。</text>
+    </view>
+
+    <view class='p'>
+      <text>b. 质保期外产品若出现故障，客户可以选择付费维修。在托管期内出现故障，维修只收取备件费用；托管期外出现故障，维修需收取服务费和备件费用。</text>
+    </view>
+
+    <view class='p-title'>
+      <text>2、关于退换货</text>
+    </view>
+
+    <view class='p'>
+      <text>a.自客户付款，到产品上架部署前，支持退换货；产品上架部署完成后，不支持退换货。</text>
+    </view>
+
+    <view style='text-align:center'>
+      <image style='width:200rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/ewm5.jpg'></image>
+    </view>
+
+  </view>
+
+  <view class='intro black'>
+    <view class='title white'>
+      <text>常见问题</text>
+    </view>
+
+    <view>
+      <block wx:for='{{ quetions }}'> 
+        <view class='question-item'>
+            <view>
+              <text class='ask'><text class='icon ask-icon'></text>{{item.ask}}</text>
+            </view>
+            <view>
+              <text class='answer'><text class='icon answer-icon'></text>{{item.answer}}</text>
+            </view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+
+
+
+</scroll-view>

@@ -1,0 +1,25 @@
+/* pages/edit/edit.wxss */
+@import "../info/info.wxss";
+.item input{
+  text-align: right;
+}
+.item input,.item picker,.item radio-group{
+  
+  height: 100%;
+  float: right;
+}
+.btns{
+  padding: 0 30rpx;
+  margin-top: 50rpx;
+  display: flex;
+}
+.btns button{
+  flex: 1;
+}
+.btns button:nth-child(1){
+  margin-right: 15rpx;
+}
+.btns button.a{
+  background: #348ce6;
+  color: #fff;
+}

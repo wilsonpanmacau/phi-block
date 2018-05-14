@@ -1,0 +1,26 @@
+/* pages/info/info.wxss */
+.item{
+  font-size: 30rpx;
+  padding: 30rpx;
+  border-bottom: 1px solid #f1f1f1;
+  color: #333;
+}
+.item>image{
+  height: 60rpx;
+  width: 60rpx;
+  float: right;
+  vertical-align: top;
+  border-radius: 30rpx;
+}
+
+.item text:nth-child(2){
+  float: right;
+}
+
+button.btn{
+  background: #348ce6;
+  color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
