@@ -1,0 +1,73 @@
+/* pages/ddw/ddw.wxss */
+@import "../platinum/platinum";
+.kuai{
+  display: flex;
+  color: #fff;
+}
+.kuai>view{
+  flex: 1;
+}
+.kuai>view text{
+  display: block;
+  text-align:center;
+}
+.kuai>view text:nth-child(1){
+  font-size: 50rpx;
+}
+.kuai>view text .unit{
+  display: inline;
+  font-size: 24rpx;
+}
+.kuai>view text:nth-child(2){
+  font-size: 24rpx;
+}
+.kuai .rb{
+  border-right: 1px solid #211d1a;
+}
+.top-box{
+  background: #272522;
+  margin-top: 30rpx;
+}
+.top-title{
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  color: #ccc;
+  border-bottom: 1px solid #22201e;
+}
+.box-content{
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.box-item{
+  height: 72rpx;
+  padding-left: 72rpx;
+  box-sizing: border-box;
+  line-height: 72rpx;
+  font-size: 28rpx;
+  color: #fff;
+  position: relative;
+}
+.box-content .box-item:nth-child(1) .icon{
+  color: #f6dd57;
+}
+.box-content .box-item:nth-child(2) .icon{
+  color: #f0f0f0;
+}
+.box-content .box-item:nth-child(3) .icon{
+  color: #dba976;
+}
+.icon-crown::after{
+  content: "\e600";
+  position: absolute;
+  width: 72rpx;
+  height: 72rpx;
+  left: 0;
+  top: 0;
+  text-align: center;
+  line-height: 72rpx;
+}
+.title text{
+  display: inline;
+}

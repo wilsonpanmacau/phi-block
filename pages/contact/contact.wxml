@@ -1,0 +1,75 @@
+<!--pages/contact/contact.wxml-->
+<view>
+  <view class='title'>
+    <text class='icon sale-icon'></text>
+    <text>销售</text>
+  </view>
+  <view class='box'>
+    <view class='item'>
+      <view class='left'>全国区域内大客户</view>
+      <view class='right f1'>13601648581</view>
+    </view>
+    <view class='item'>
+      <view class='left'>华北区域</view>
+      <view class='right d1'>13601648581</view>
+    </view>
+    <view class='item'>
+      <view class='left'>华中区域</view>
+      <view class='right f1'>13601648581</view>
+    </view>
+    <view class='item'>
+      <view class='left'>华南区域</view>
+      <view class='right d1'>13601648581</view>
+    </view>
+    <view class='item'>
+      <view class='left'>华东区域</view>
+      <view class='right f1'>13601648581</view>
+    </view>
+    <view class='item'>
+      <view class='left'>西南区域</view>
+      <view class='right d1'>13601648581</view>
+    </view>
+  </view>
+
+  <view class='title'>
+    <text class='icon hou-icon'></text>
+    <text>售后</text>
+  </view>
+  <view class='box'>
+    <view class='item'>
+      <view class='left'>售后</view>
+      <view class='right f1'>400-756-7567</view>
+    </view>
+  </view>
+
+  <view class='title'>
+    <text class='icon address-icon'></text>
+    <text>地址</text>
+  </view>
+  <view class='box'>
+    <view class='item'>
+      <view class='left'>地址</view>
+      <view class='right f1'>上海市松江区思贤路3666号</view>
+    </view>
+  </view>
+  
+  <view class='msg'>
+    <input class='msg_input' placeholder='姓氏：' placeholder-style='font-size:30rpx;'></input>
+    <input class='msg_input' placeholder='手机：' placeholder-style='font-size:30rpx;'></input>
+    <input class='msg_input' placeholder='邮箱：' placeholder-style='font-size:30rpx;'></input>
+    <textarea class='msg_input' placeholder='留言内容：' placeholder-style='font-size:30rpx;'></textarea>
+    <button class='btn'>确认提交</button>
+  </view>
+  <map 
+    id='map'
+    class='map' 
+    markers='{{ markers }}'
+    longitude='{{ location.lng}}' 
+    latitude='{{ location.lat}}' 
+    
+  ></map>
+  <view class='address'>
+    <view class='a'><text>上海斐讯数据通信技术有限公司</text></view>
+    <view class='b'><text>上海市松江区思贤路3666号</text></view>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+/* pages/hostC8/hostC8.wxss */
+
+@import "../hostN1M/hostN1M.wxss";

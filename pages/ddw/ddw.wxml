@@ -1,0 +1,213 @@
+<!--pages/ddw/ddw.wxml-->
+<scroll-view class='scroll' scroll-y='true' scroll-with-animation='true' scroll-into-view="{{toView}}">
+
+  <view class='intro' id='first'>
+    <view>
+      <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/rry_banner1.jpg'></image>
+    </view>
+    <view class='pos-bottom flex'>
+      <text class='menu-item' data-view='{{ item.view }}' bindtap='toView' wx:for='{{ menu }}'>{{ item.text }}</text>
+    </view>
+  </view>
+
+  <!--认识日日赢  -->
+  <view class='wrapper' id='ddw'>
+    <view class='title'>
+      <text>日日赢区块链累计情况</text>
+    </view>
+    <view class='kuai'>
+      <view class='rb'>
+        <text class='num'>275305115</text>
+        <text>日日赢产量</text>
+      </view>
+      <view>
+        <text class='num'>965983</text>
+        <text>区块高度</text>
+      </view>
+    </view>
+    <view class='title'>
+      <text>资源共享人均表现</text>
+    </view>
+    <view class='kuai'>
+      <view class='rb'>
+        <text class='num'>21<text class='unit'>H</text></text>
+        <text>人均有效在线时长</text>
+      </view>
+       <view class='rb'>
+        <text class='num'>16<text class='unit'>MBPS</text></text>
+        <text>人均贡献商行带宽</text>
+      </view>
+      <view>
+        <text class='num'>987<text class='unit'>GB</text></text>
+        <text>人均贡献存储</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='platinum1 intro1'>
+    <view class='top-box'>
+      <view class='top-title'>
+        <text>日日赢榜Top5</text>
+      </view>
+      <view class='box-content'>
+        <block wx:for='{{ ddw_top5 }}'>
+          <view class='box-item'>
+            <text class='icon icon-crown' wx:if='{{ index <3 }}'></text>
+            <text>{{ item.p }}</text>
+            <text style='float:right'>{{ item.n }}个</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='top-box'>
+      <view class='top-title'>
+        <text>贡献上行带宽Top5</text>
+      </view>
+      <view class='box-content'>
+        <block wx:for='{{ broad_top5 }}'>
+          <view class='box-item'>
+            <text class='icon icon-crown' wx:if='{{ index <3 }}'></text>
+            <text>{{ item.p }}</text>
+            <text style='float:right'>{{ item.n }}Mbps</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='top-box'>
+      <view class='top-title'>
+        <text>贡献存储宽Top5</text>
+      </view>
+      <view class='box-content'>
+        <block wx:for='{{ share_top5 }}'>
+          <view class='box-item'>
+            <text class='icon icon-crown' wx:if='{{ index <3 }}'></text>
+            <text>{{ item.p }}</text>
+            <text style='float:right'>{{ item.n }}GB</text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class='intro-wenzi top-box'>
+      <view class='title'>
+        <text>什么是<text style='color:#e26733'>日日赢</text></text>
+      </view>
+      <text>日日赢（英文缩写 DDW）是斐讯天天链智能产品硬件生态合作伙伴 Smart Chain Foundation 发行的数字资产，为智慧家庭用户提供统一的服务汇兑服务，以及去中心化的数字版权内容交易功能。 </text>
+      <text>斐讯与Smart Chain Foundation 达成智能硬件生态合作，用户通过天天链智能硬件产品加入白金奖励计划，以分享网络带宽、存储空间等资源来进行区块链挖矿获得 Smart Chain Foundation 发行的日日赢。在天天链智能硬件产品生态中，用户可使用日日赢数字资产进行服务与产品的兑换。 </text>
+    </view>
+
+  </view>
+
+  <view class='platinum platinum1' id='getddw'>
+    <view class='wrapper'>
+    <view class='title'>
+      <text>天天链APP下载</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+    
+    <view class='app_down_wenzi'>
+      <text>天天链APP是用户使用天天链设备的NAS功能，进行文件上传、下载、存储的移动客户端工具。</text>
+      <text>目前天天链提供：iOS、Android两种版本</text>
+    </view>
+    <view class='app_icon'>
+      <text>iOS</text>
+      <text>Android</text>
+    </view>
+
+    <view class='code'>
+      <image style='height:160rpx;width:160rpx;' src='http://cdn.phi-block.com/templates/default/images/bg_img06.jpg'></image>
+    </view>
+    <view class='code_wenzi code'>
+      <text>请用手机扫描二维码或长按识别二维码</text>
+    </view>
+
+
+    <view class='title'>
+      <text>日日赢APP下载</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+    
+    <view class='app_down_wenzi'>
+      <text>日日赢APP是用于用户参与白金奖励计划，并进行设备、收益的管理与查看的移动客户端工具。</text>
+      <text>目前天天链提供：iOS、Android两种版本</text>
+    </view>
+    <view class='app_icon'>
+      <text>iOS</text>
+      <text>Android</text>
+    </view>
+
+    <view class='code'>
+      <image style='height:160rpx;width:160rpx;' src='http://cdn.phi-block.com/templates/default/images/bg_img7.jpg'></image>
+    </view>
+    <view class='code_wenzi code'>
+      <text>请用手机扫描二维码或长按识别二维码</text>
+    </view>
+    <view class='app_att'>
+      <text>注：iOS用户需打开【设置】-【通用】-【设备管理】信任“Beijing Yunfei Data Service Co...”选项。</text>
+    </view>
+
+    <view class='title'>
+      <text>赢呗下载</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+    
+    <view class='app_down_wenzi'>
+      <text>赢呗客户端是用来管理日日赢数字资产的工具，支持生成和管理私钥、接收和使用日日赢。</text>
+      <text>目前赢呗提供：Windows版本</text>
+    </view>
+    <view class='app_icon'>
+      <text>Windows</text>
+      <text>Windows绿色版</text>
+    </view>
+    <view class='app_att shuo'>
+      <text>下载说明</text>
+      <text>1. 安装完毕会自动启动， 稍等片刻</text>
+      <text>2. 只支持windows 64-bit的系统</text>
+      <text>3. 安装前关闭所有杀毒软件</text>
+      <text>4. 建议安装在默认目录，不要修改安装路径</text>
+
+    </view>
+    <view class='app_att'>
+      <text>注：根据国家政策的相关要求，此版本赢呗钱包暂未开启用户之间的转账功能。</text>
+      <text>赢呗客户端的版权方为天天链官方指定合作伙伴。</text>
+    </view>
+
+    </view>
+  </view>
+  <!--怎样存储  -->
+
+  <view class='platinum1 intro1' id='saveddw'>
+    <view class='title'>
+        <text>怎样将通过参与白金奖励计划产生的</text>
+        <view></view>
+        <text style='color:#e26733'>日日赢存储到区块链账户中</text>
+        <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+
+    <view>
+      <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/rry_img1.png'></image>
+    </view>
+
+  </view>
+  <!--处罚规则  -->
+  <view class='platinum1 intro-wenzi' id='guize'>
+      <view class='title'>
+      <text>处罚规则说明</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+      <text class='ti'>白金奖励计划违规作弊行为处罚规则</text>
+      <text>用户购买天天链智能硬件设备，通过设备贡献家庭闲置的存储、带宽资源，为社会贡献更优性价比的云计算资源，从而获得日日赢积分奖励的过程，应当是在公平公正、健康良好的网络环境中进行的。为预防少数用户通过非法技术手段，危害白金奖励计划的开展环境，侵犯其他用户的合法利益，天天链官方正式发布“白金奖励计划违规作弊行为处罚规则”，今后一旦出现违规作弊的行为，都将依照此规则进行处理。</text>
+      <text class='ti'>违规作弊行为说明：</text>
+      <text>任何用户利用软件、硬件等相关漏洞，侵入、拦截、破坏、修改程序以及使用带有伪造、篡改任何功能信息的软/硬件，虚假上报上行带宽、闲置存储空间、在线时长、硬件能力、算力等数据，破坏白金奖励计划公正平等的环境。</text>
+
+      <text class='ti'>违规作弊行为处罚措施：</text>
+      <text>一、任何用户，一旦被发现有作弊违规的数据记录或作弊违规的行为，包括但不限于：使用扩容盘、通过samba、nfs等局域网共享方式挂载网络存储设备、虚拟网络环境等行为，将受到永久性封停违规账号和违规设备参与白金奖励计划的处罚。</text>
+      <text>二、若发现用户存在“侵入修改程序，但未虚假上报上行带宽、闲置存储空间、在线时长、硬件能力等数据”的行为，将受到永久性封停违规设备参与白金奖励计划的处罚，日日赢账号可在其他未违规设备中重新激活，可提出封停前未提取的日日赢。</text>
+      <text>三、若发现用户存在“侵入修改程序，但最终未实际完成侵入、拦截、破坏、修改程序”的行为，将予以封停违规账号违规设备一日或数日的处罚。</text>
+      <text>一旦出现以上违规行为（包括但不限于），都将严格按照本规则进行处理。对于情节严重者，天天链官方将采取法律手段进行打击，坚决捍卫所有合法合规参与白金奖励计划用户的正当利益。</text>
+      <text class='ti'>附则：</text>
+      <text>本处罚规则自发布之日起生效。天天链官方有权在必要时单方修改本规则的相关条款。天天链官方对本规则相关条款的修改自其线上公告声明的具体生效日自动生效。用户在参与白金奖励计划时，应当及时查阅了解修改的内容，并自觉遵守本规则的相关内容；用户不同意修改内容的，应当立即停止继续参与白金奖励计划，继续使用将被视为用户同意修改内容。</text>
+      <text>希望广大白金奖励计划参与者们可以自觉遵守活动规则，维护网络环境，一致抵制一切侵犯他人利益的不法行为。</text>
+    </view>
+
+</scroll-view>

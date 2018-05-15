@@ -2,9 +2,9 @@
 <scroll-view class='wrapper-scroll' scroll-y = 'true'>
   <text class='buy'><text class='icon shopcart'></text>立即购买</text>
   <view class='n1m'>
-     <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/phone_pro_banner2.gif'></image>
+     <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/phone_pro_banner.gif'></image>
   </view>
-
+  
   <view style='background:#1c1c1c;padding-bottom:50rpx;'>
     <block wx:for='{{ process }}'>
       <view class='process {{ index !== (process.length-1)?"triangle":""}}'>

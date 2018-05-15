@@ -1,0 +1,32 @@
+<!--pages/service/service.wxml-->
+<scroll-view class='scroll' scroll-y='true'>
+  <view class='intro'>
+    <view class='title'>
+      <text>常见问题</text>
+    </view>
+    <view class='desc'>
+      <text>保修期内产品若出现故障，直接更换备机待故障产品维修完成，再切换回来，直接更换备机待故障产品维修完成，再切换回来</text>
+    </view>
+
+    <!--问题分类  -->
+    <view class='flex'>
+      <block wx:for='{{ menu }}'>
+        <text class='{{ index === active_index?"active_menu":""}}' data-index='{{ index }}' bindtap='clickMenu'>{{ item.text }}</text>
+      </block>
+    </view>
+
+    <view>
+      <block wx:for='{{ quetions }}'> 
+        <view class='question-item'>
+            <view>
+              <text class='ask'><text class='icon ask-icon'></text>{{item.ask}}</text>
+            </view>
+            <view>
+              <text class='answer'><text class='icon answer-icon'></text>{{item.answer}}</text>
+            </view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+</scroll-view>

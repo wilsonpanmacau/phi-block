@@ -1,1 +1,94 @@
 /* pages/hostN1M/hostN1M.wxss */
+@import "../n1m/n1m.wxss";
+.process{
+  width: 80%;
+  height: 180rpx;
+  border-radius: 20rpx;
+  margin: 0 auto;
+  background: #897e64;
+  position: relative;
+  margin-bottom: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 28rpx;
+}
+.triangle::after{
+  display: block;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -30rpx;
+  border-left:80rpx solid #897e64;
+  
+  border-top:80rpx solid transparent;
+  transform: translateX(-50%) rotate(-45deg);
+}
+.black{
+  background: #1c1c1c;
+}
+.black .title{
+  color: #fff;
+}
+.process .icon{
+  color: #fbf1d8;
+  margin-right: 15rpx;
+  font-size: 60rpx;
+  margin-left: 50rpx;
+}
+.process text.index{
+  position: absolute;
+  font-size: 80rpx;
+  font-weight: bold;
+  left: 10rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9e947a;
+  font-family: 'AGENCYB';
+}
+.process view.wenzi{
+  width: 50%;
+}
+.buy-icon::after{
+  content: '\e60b';
+}
+.data-icon::after{
+  content: '\e700';
+}
+.bushu-icon::after{
+  content: "\e640";
+}
+.wakuang-icon::after{
+  content: "\e604";
+}
+.chakan-icon::after{
+  content: '\e625'
+}
+.setting-icon::after{
+  content: '\e60c';
+}
+.xiadan-icon::after{
+  content: "\e648";
+}
+.fahuo-icon::after{
+  content: '\e26f';
+}
+.tongzhi1-icon::after{
+  content: '\e643';
+}
+.shangjia-icon::after{
+  content: '\e616';
+}
+.liebiao-icon::after{
+  content: '\e612';
+}
+.bangding-icon::after{
+  content: '\e654';
+}
+.tongzhi2-icon::after{
+  content: "\e667";
+}
+.wancheng-icon::after{
+  content: "\e646";
+}

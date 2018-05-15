@@ -1,4 +1,4 @@
-// pages/hostN1M/hostN1M.js
+// pages/service/service.js
 Page({
 
   /**
@@ -22,35 +22,24 @@ Page({
         date: '2018-04-16'
       }
     ],
-    process: [
+    menu:[
       {
-        text: "购买矿机（联系客服）",
-        icon_class: 'buy-icon',
+        text:'产品问题'
       },
       {
-        text: "矿机发货至数据中心",
-        icon_class: 'data-icon',
+        text: '产品问题'
       },
       {
-        text: "部署完成",
-        icon_class: 'bushu-icon',
-      },
-      {
-        text: "开始挖矿",
-        icon_class: 'wakuang-icon',
-      },
-      {
-        text: "实时查看",
-        icon_class: 'chakan-icon',
-      },
-      {
-        text: "按时缴纳托管费，随时随地查看收益",
-        icon_class: 'setting-icon',
-      },
-
-    ]
+        text: '产品问题'
+      }
+    ],
+    active_index:-1,
   },
-
+  clickMenu:function(e){
+    this.setData({
+      active_index:parseInt(e.currentTarget.dataset.index)
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

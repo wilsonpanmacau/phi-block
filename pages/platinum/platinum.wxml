@@ -1,0 +1,300 @@
+<!--pages/platinum/platinum.wxml-->
+<scroll-view class='scroll' scroll-y='true' scroll-with-animation='true' scroll-into-view="{{toView}}">
+
+
+  <view class='intro' id='first'>
+    <view>
+      <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/lc_banner.jpg'></image>
+    </view>
+    <view class='pos-bottom flex'>
+      <text class='menu-item' data-view='{{ item.view }}' bindtap='toView' wx:for='{{ menu }}'>{{ item.text }}</text>
+    </view>
+
+  </view>
+  <!--白金奖励计划  -->
+  <view class='intro platinum' id='plan'>
+    <image class='posa fill-img' src='http://cdn.phi-block.com/templates/default/images/bj_bg.jpg'></image>
+    <view style='position:relative;z-index:10;'>
+      <view class='title'>
+        <text>白金奖励计划</text>
+        <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+      </view>
+    </view>
+    <view class='wenzi-into'>
+      <text>白金奖励计划是针对斐讯新一代智能硬件天天链专门定制的回馈计划，用户购买天天链智能硬件产品后，可选择加入白金奖励计划，通过共享家庭闲置的存储空间、网络带宽、计算能力获取奖励。用户以区块链挖矿的方式实现闲置资源的共享，挖取由斐讯生态合作伙伴 Smart Chain Foundation 发行的面向智慧家庭场景的数字资产“日日赢”，“日日赢”可用于兑换斐讯数字娱乐内容服务以及购买斐讯其他产品。 用户闲置资源通过区块链接入斐讯云计算平台，转化为弹性计算、存储与网络资源池，为斐讯生态以及产业内企业提供更优性价比的计算、存储、网络加速等一系列云计算资源，同时降低重复建设所导致的资源浪费。</text>
+    </view>
+  </view>
+
+  <view class='intro platinum platinum1'>
+    <view class='title'>
+      <text>如何加入白金奖励计划</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+    <view>
+      <image mode='widthFix' class='img' src='http://cdn.phi-block.com/templates/default/images/bg_img01.png'></image>
+    </view>
+    <view class='title'>
+      <text>日日赢介绍</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+
+    <view class='intro-wenzi'>
+      <text>日日赢（英文缩写 DDW）是斐讯天天链智能产品硬件生态合作伙伴 Smart Chain Foundation 发行的数字资产，为智慧家庭用户提供统一的服务汇兑服务，以及去中心化的数字版权内容交易功能。</text>
+      <text>斐讯与Smart Chain Foundation 达成智能硬件生态合作，用户通过天天链智能硬件产品加入白金奖励计划，以分享网络带宽、存储空间等资源来进行区块链挖矿获得 Smart Chain Foundation 发行的日日赢。在天天链智能硬件产品生态中，用户可使用日日赢数字资产进行服务与产品的兑换。 </text>
+      <text>日日赢基于分布式计算和区块链技术，用户通过共享资源的方式进行挖矿，通过基于区块链的分布式账本，保障所有用户交易信息透明、不可变更篡改，实现用户资产可信与安全。</text>
+    </view>
+
+    <view class='title'>
+      <text>日日赢获取途径</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+
+    <view class='intro-wenzi'>
+      <text>通过购买天天链智能硬件产品，并加入白金奖励计划，通过共享资源获取日日赢数字资产 。</text>
+      <text>参与斐讯官方活动，根据规则获得活动奖励。 </text>
+    </view>
+  </view>
+
+  <!--日日赢  -->
+  <view class='intro platinum2' id="ddw">
+    <image class='posa fill-img' src='http://cdn.phi-block.com/templates/default/images/bj_bg5.jpg'></image>
+    <view class='content'>
+      <view class='title'>
+        <text>日日赢奖励规则</text>
+        <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+      </view>
+
+      <view class='wrap'>
+        <view class='list'>
+          
+            <image class='img1' src='http://cdn.phi-block.com/templates/default/images/bj_pic4.png'></image>
+          
+
+          <view class='guize'>
+            <text>日日赢总额为<text class='b'>20亿</text>，其中团队持有以及项目运营消耗约<text class='b'> 4亿（20%）</text>， 分时段锁定，首年不解锁。用于奖励计划<text class='b'>16亿（80%）</text>，全部由设备贡献产生，发行规则充分保障挖矿用户权益。 </text>
+          </view>
+
+          
+            <image class='img1' src='http://cdn.phi-block.com/templates/default/images/bj_pic6.png'></image>
+          
+          
+
+            <image  class='img1' src='http://cdn.phi-block.com/templates/default/images/bj_pic4.png'></image>
+          <view class='guize'>
+            <text>日日赢每日产量固定，第一年日每日<text class="a">产量约为219万</text>，每365 天产量减半一次。</text>
+          </view>
+            <image class='img1' src='http://cdn.phi-block.com/templates/default/images/bj_pic6.png'></image>
+          
+            <image class='img1' src='http://cdn.phi-block.com/templates/default/images/bj_pic4.png'></image>
+            <view class='guize'>
+              <text>日日赢是基于矿机硬件能力、上行带宽、可共享存储大小、有效在线时长等贡献进行的激励。每日对当前全网的共享能力进行收集，全网在线的天天链设备将根据贡献量证明共识挖取日日赢。</text>
+            </view>
+            <image class='img1' src='http://cdn.phi-block.com/templates/default/images/bj_pic6.png'></image>
+            <view class='guize'>
+              <text>用户每日产量计算：</text>
+            </view>
+
+            <view class='wrap wrap1'>
+              <text>T1（每日总发币量）*C1（用户每日贡献度）=N1（用户当日挖矿奖励）</text>
+            </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--N1使用教程  -->
+  <view class='platinum platinum1' id='n1'>
+    <view class='title'>
+      <text><text style='color:#e7781f;'>天天链家庭版N1</text>使用教程</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+
+    <view>
+      <image mode='widthFix' class='img' src='http://cdn.phi-block.com/templates/default/images/bg_img002.png'></image>
+    </view>
+    <view>
+      <image mode='widthFix' class='img' src='http://cdn.phi-block.com/templates/default/images/bg_img003.png'></image>
+    </view>
+
+    <view class='intro-wenzi' style='color:#e7781f'>
+      <text>注：</text>
+      <text>一个白金奖励计划开启码只能激活一个日日赢账号下的一台天天链N1（首台）的挖矿资格，若需激活剩余4台天天链N1的挖矿资格，必须使用白金奖励计划激活码进行激活。</text>
+      <text>只有使用同一个华夏万家账号，才可以在华夏万家激活2-5台设备的返现资格后，获得白金奖励计划激活码。</text>
+    </view>
+
+    <view class='title'>
+      <text>白金奖励计划开启码</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+    <view class='wrap'>
+        <view class='list'>
+          <view class='list_title'>
+            <text>定义：白金奖励计划开启码是用户购买首台天天链N1后，加入白金奖励计划的必要条件。</text>
+          </view>
+
+          <view class='clearfix'>
+            <view class='h2' style='padding-top:40rpx;'>
+              <text>获取方式</text>
+            </view>
+            <view class='ul'>
+              <view class='li triangle'><text>下载“斐讯商城APP”</text></view>
+              <view class='li triangle'><text>购买橙汁PLUS会员</text></view>
+              <view class='li triangle'><text>获取白金奖励计划开启码</text></view>
+              <view class='li'><text>前往日日赢APP中添加设备激活</text></view>
+            </view>
+          </view>
+
+        </view>
+    </view>
+
+    <view class='title'>
+      <text>白金奖励计划激活码</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+    <view class='wrap'>
+        <view class='list'>
+          <view class='list_title'>
+            <text>定义：用户购买第2-5台天天链N1设备，在日日赢APP中，激活设备的必要条件。</text>
+          </view>
+
+          <view class='clearfix'>
+            <view class='h2' style='padding-top:140rpx;'>
+              <text>获取方式</text>
+            </view>
+            <view class='ul'>
+              <view class='li triangle'><text>需下载“华夏万家金服”，单笔投资≥3000元90天（含）以上的理财产品 ，获得天天链N1设备的激活资格</text></view>
+              <view class='li triangle'><text>进行N1设备K码激活</text></view>
+              <view class='li triangle'><text>激活成功后获得白金奖励计划的激活码</text></view>
+              <view class='li'><text>在“我的-我的券包”查看激活码及激活码使用流程</text></view>
+            </view>
+          </view>
+
+        </view>
+    </view>
+  </view>
+  <!--N1M使用教程  -->
+  <view class='platinum platinum1' id='n1m'>
+    <view class='title'>
+      <text><text style='color:#e7781f;'>天天链托管版N1M</text>使用教程</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+
+    <view>
+      <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/bg_img004.png'></image>
+    </view>
+  </view>
+  <!-- 使用下载  -->
+  <view class='platinum platinum1' id='app'>
+    <view class='wrapper'>
+    <view class='title'>
+      <text>天天链APP下载</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+    
+    <view class='app_down_wenzi'>
+      <text>天天链APP是用户使用天天链设备的NAS功能，进行文件上传、下载、存储的移动客户端工具。</text>
+      <text>目前天天链提供：iOS、Android两种版本</text>
+    </view>
+    <view class='app_icon'>
+      <text>iOS</text>
+      <text>Android</text>
+    </view>
+
+    <view class='code'>
+      <image style='height:160rpx;width:160rpx;' src='http://cdn.phi-block.com/templates/default/images/bg_img06.jpg'></image>
+    </view>
+    <view class='code_wenzi code'>
+      <text>请用手机扫描二维码或长按识别二维码</text>
+    </view>
+
+
+    <view class='title'>
+      <text>日日赢APP下载</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+    
+    <view class='app_down_wenzi'>
+      <text>日日赢APP是用于用户参与白金奖励计划，并进行设备、收益的管理与查看的移动客户端工具。</text>
+      <text>目前天天链提供：iOS、Android两种版本</text>
+    </view>
+    <view class='app_icon'>
+      <text>iOS</text>
+      <text>Android</text>
+    </view>
+
+    <view class='code'>
+      <image style='height:160rpx;width:160rpx;' src='http://cdn.phi-block.com/templates/default/images/bg_img7.jpg'></image>
+    </view>
+    <view class='code_wenzi code'>
+      <text>请用手机扫描二维码或长按识别二维码</text>
+    </view>
+    <view class='app_att'>
+      <text>注：iOS用户需打开【设置】-【通用】-【设备管理】信任“Beijing Yunfei Data Service Co...”选项。</text>
+    </view>
+
+    <view class='title'>
+      <text>赢呗下载</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+    
+    <view class='app_down_wenzi'>
+      <text>赢呗客户端是用来管理日日赢数字资产的工具，支持生成和管理私钥、接收和使用日日赢。</text>
+      <text>目前赢呗提供：Windows版本</text>
+    </view>
+    <view class='app_icon'>
+      <text>Windows</text>
+      <text>Windows绿色版</text>
+    </view>
+    <view class='app_att shuo'>
+      <text>下载说明</text>
+      <text>1. 安装完毕会自动启动， 稍等片刻</text>
+      <text>2. 只支持windows 64-bit的系统</text>
+      <text>3. 安装前关闭所有杀毒软件</text>
+      <text>4. 建议安装在默认目录，不要修改安装路径</text>
+
+    </view>
+    <view class='app_att'>
+      <text>注：根据国家政策的相关要求，此版本赢呗钱包暂未开启用户之间的转账功能。</text>
+      <text>赢呗客户端的版权方为天天链官方指定合作伙伴。</text>
+    </view>
+
+    </view>
+
+    <view class='title'>
+        <text>斐讯与Smart Chain Foundation Ltd.联合声明</text>
+        <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+
+      <view class='intro-wenzi clearfix'>
+        <text class='ti'>斐讯与Smart Chain Foundation Ltd.联合声明</text>
+        <text>斐讯与Smart Chain Foundation Ltd.不支持任何关于日日赢奖励积分的交易行为，也未向用户提供过任何交易渠道，日日赢按照斐讯推出的商业活动规则在活动内部使用、流转，用户享有相应的服务，不代表任何收益及分红，并不支持用户的任何投资、炒作行为。</text>
+        <text>用户通过任何“交易平台”及其他方式所发生的交易行为及后果与斐讯及Smart Chain Foundation Ltd.无关。期间产生的风险及损失由用户自行承担，请广大用户知悉。</text>
+        <text>同时提示用户，请不要使用任何非斐讯发布的软件应用。</text>
+        <text>特此声明。</text>
+        <text>四川斐讯数据产业有限公司<text style='float:right'>Smart Chain Foundation Ltd.</text></text>
+        <text style='float:right'>2018年4月27日</text>
+      </view>
+
+    <view class='title'>
+      <text>斐讯与Smart Chain Foundation Ltd.联合声明</text>
+      <image style='width:120rpx;' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/icon01.png'></image>
+    </view>
+
+    <view class='intro-wenzi'>
+      <text class='ti'>白金奖励计划违规作弊行为处罚规则</text>
+      <text>用户购买天天链智能硬件设备，通过设备贡献家庭闲置的存储、带宽资源，为社会贡献更优性价比的云计算资源，从而获得日日赢积分奖励的过程，应当是在公平公正、健康良好的网络环境中进行的。为预防少数用户通过非法技术手段，危害白金奖励计划的开展环境，侵犯其他用户的合法利益，天天链官方正式发布“白金奖励计划违规作弊行为处罚规则”，今后一旦出现违规作弊的行为，都将依照此规则进行处理。</text>
+      <text class='ti'>违规作弊行为说明：</text>
+      <text>任何用户利用软件、硬件等相关漏洞，侵入、拦截、破坏、修改程序以及使用带有伪造、篡改任何功能信息的软/硬件，虚假上报上行带宽、闲置存储空间、在线时长、硬件能力、算力等数据，破坏白金奖励计划公正平等的环境。</text>
+
+      <text class='ti'>违规作弊行为处罚措施：</text>
+      <text>一、任何用户，一旦被发现有作弊违规的数据记录或作弊违规的行为，包括但不限于：使用扩容盘、通过samba、nfs等局域网共享方式挂载网络存储设备、虚拟网络环境等行为，将受到永久性封停违规账号和违规设备参与白金奖励计划的处罚。</text>
+      <text>二、若发现用户存在“侵入修改程序，但未虚假上报上行带宽、闲置存储空间、在线时长、硬件能力等数据”的行为，将受到永久性封停违规设备参与白金奖励计划的处罚，日日赢账号可在其他未违规设备中重新激活，可提出封停前未提取的日日赢。</text>
+      <text>三、若发现用户存在“侵入修改程序，但最终未实际完成侵入、拦截、破坏、修改程序”的行为，将予以封停违规账号违规设备一日或数日的处罚。</text>
+      <text>一旦出现以上违规行为（包括但不限于），都将严格按照本规则进行处理。对于情节严重者，天天链官方将采取法律手段进行打击，坚决捍卫所有合法合规参与白金奖励计划用户的正当利益。</text>
+      <text class='ti'>附则：</text>
+      <text>本处罚规则自发布之日起生效。天天链官方有权在必要时单方修改本规则的相关条款。天天链官方对本规则相关条款的修改自其线上公告声明的具体生效日自动生效。用户在参与白金奖励计划时，应当及时查阅了解修改的内容，并自觉遵守本规则的相关内容；用户不同意修改内容的，应当立即停止继续参与白金奖励计划，继续使用将被视为用户同意修改内容。</text>
+      <text>希望广大白金奖励计划参与者们可以自觉遵守活动规则，维护网络环境，一致抵制一切侵犯他人利益的不法行为。</text>
+    </view>
+
+  </view>
+
+</scroll-view>

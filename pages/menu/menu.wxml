@@ -13,27 +13,27 @@
     <text>托管服务</text>
   </view>
   <view class='toolbar {{ service.list }}'>
-    <view><text>N1M</text></view>
-    <view><text>C8</text></view>
+    <view data-path='../hostN1M/hostN1M' bindtap='goPath'><text>N1M</text></view>
+    <view data-path='../hostC8/hostC8' bindtap='goPath'><text>C8</text></view>
   </view>
   <view class='menu-item {{ plan.icon}}' data-type='3' bindtap='click'>
     <text class='icon icon-arrow'></text>
     <text>白金奖励计划</text>
   </view>
   <view class='toolbar {{ plan.list }}'>
-    <view><text>白金奖励计划</text></view>
-    <view><text>日日赢矿机</text></view>
+    <view data-path='../platinum/platinum' bindtap='goPath'><text>白金奖励计划</text></view>
+    <view data-path='../ddw/ddw' bindtap='goPath'><text>日日赢矿机</text></view>
   </view>
-  <view class='menu-item'>
+  <view class='menu-item' data-path='../service/service' bindtap='goPath'>
     <text>服务支持</text>
   </view>
   <view class='menu-item'>
     <text>关于我们</text>
   </view>
-  <view class='menu-item'>
+  <view class='menu-item' data-path='../news/news' bindtap='goPath'>
     <text>新闻动态</text>
   </view>
-  <view class='menu-item'>
+  <view class='menu-item' data-path='../contact/contact' bindtap='goPath'>
     <text>联系我们</text>
   </view>
 </view>

@@ -1,0 +1,17 @@
+<!--pages/news/news.wxml-->
+<scroll-view class='scroll' scroll-y='true'>
+  <block wx:for='{{ news }}'>
+    <view class='item'>
+      <image class='img' mode='widthFix' src='{{ item.img }}'></image>
+      <view class='title'><text>{{ item.title }}</text></view>
+      <view class='content'><text>{{ item.content}}</text></view>
+      <view class='info'>
+        <text class='icon eye-icon'></text>
+        <text class='read'>阅读：{{ item.read }}</text>
+        <text class='icon write-icon'></text>
+        <text class='author'>作者：{{ item.author}}</text>
+        <text class='date'>{{ item.date }}</text>
+      </view>
+    </view>
+  </block>
+</scroll-view>
