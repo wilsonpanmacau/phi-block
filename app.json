@@ -1,40 +1,33 @@
 {
   "pages":[
+    "pages/reg/reg",
+    "pages/editPassword/editPassword",
+    "pages/editEmail/editEmail",
+    "pages/editPhone/editPhone",
+    
+    "pages/confirm/confirm",
     "pages/n1m/n1m",
     "pages/home/home",
     "pages/contact/contact",
     "pages/news/news",
     "pages/service/service",
-    
     "pages/ddw/ddw",
     "pages/platinum/platinum",
-    
     "pages/hostC8/hostC8",
     "pages/hostN1M/hostN1M",
-    
-    
     "pages/shopcart/shopcart",
     "pages/menu/menu",
     "pages/me/me",
-    "pages/editEmail/editEmail",
-    "pages/editPhone/editPhone",
-    "pages/editPassword/editPassword",
-    "pages/password/password",
     
+    
+    
+    "pages/password/password",
     "pages/edit/edit",
     "pages/info/info",
     "pages/address/address",
     "pages/addAddress/addAddress",
-    
-    
     "pages/order/order",
-    
-
-    
-    "pages/reg/reg",
-    
     "pages/forget/forget",
-    
     "pages/login/login",
     "pages/c8/c8"
   ],

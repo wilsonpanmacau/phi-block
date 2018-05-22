@@ -2,3 +2,30 @@
 
 @import '../login/login.wxss';
 
+.icon-phone::after{
+  content: '\e636';
+}
+.icon-code::after{
+  content: '\e6a0';
+}
+.icon-msg::after{
+  content: '\e60f';
+}
+.codeimg{
+  width: 140rpx;
+  position: absolute;
+  right: 0;
+  bottom: 10rpx;
+}
+.sendCode{
+  background: #348ce6;
+  color: #fff;
+  font-size: 26rpx;
+  padding: 10rpx 30rpx;
+  position: absolute;
+  right: 0;
+  bottom: 10rpx;
+}
+.input-group .msc{
+  padding-right: 220rpx;
+}

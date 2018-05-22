@@ -12,6 +12,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    height:null
+    height:null,
+    baseUrl:'http://172.17.170.100/block/'
   }
 })

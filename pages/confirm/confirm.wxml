@@ -1,0 +1,77 @@
+<!--pages/confirm/confirm.wxml-->
+<scroll-view scroll-y class='content'>
+  <view class='address'>
+    <p><text class='name'>顾桂贵</text><text class='phone'>18321845414</text></p>
+    <p class='detail-address'><text>上海</text><text>上海市</text><text>松江区</text><text>多少路多少号</text></p>
+    <p class='edit'><text>修改</text></p>
+    <text class='icon icon-right'></text>
+  </view>
+  <view class='gray'></view>
+  <p class='invoice'><text>发票</text><text class='a icon icon-down'></text><text class='a'>个人</text></p>
+  <view class='gray'></view>
+  <view class='product'><image class='img1' mode='widthFix' src='http://www.phi-block.com/upload/news/1523832120918458645.png'></image>
+     <text>天天链托管版N1M</text>
+     <text class='a'>4994.00元</text>
+  </view>
+  <view class='gray'></view>
+  <view class='msg'>
+    <p>备注信息</p>
+    <textarea placeholder='备注信息' placeholder-style='font-size:14px;'></textarea>
+  </view>
+  <view class='gray'></view>
+  <view class='protocol'>
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox color='#348ce6' value="{{check}}" checked="{{check}}"/>
+    </checkbox-group>
+    协议条款
+  </view>
+</scroll-view>
+<view class='bottom'>
+  <view class='money'>
+    <text>产品总额：4994.00元</text>
+  </view>
+  <view class='submit'>提交订单</view>
+</view>
+
+<view class='modal'>
+  <view>
+    <view class='modal-info'>
+      <p style='margin-bottom:20rpx;'>请您仔细阅读以下信息提示：</p>
+      <p style='margin-bottom:10rpx;'>（1）若您购买斐讯天天链托管版N1M，需要双方签署一下合同，实际购买后，销售会第一时间与您联系。</p>
+      <p>（2）点击，《<text>销售合同条款预览</text>》查看合同相关信息。</p>
+      <view class='btns'>
+        <view>同意</view>
+        <view>拒绝</view>
+      </view>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y class='protocol-detail'>
+  <p class='p-t'>销售合同条款预览</p>
+  <p class='p-c'>乙方：上海斐阅信息技术有限公司</p>
+  <p class='p-c'>地址：<text class='u'>上海市普陀区同普路1030号3号楼1楼103室</text></p>
+  <p class='p-c'>开户行：<text class='u'>上海银行曹杨支行</text></p>
+  <p class='p-c'>账号：<text class='u'>03003495298</text></p>
+  <p class='p-c'>甲乙双方协商一致，就甲方向乙方购买网络产品事宜达成如下协议：</p>
+  <p class='p-c'>产品名称、型号、单位、数量、价格、金额</p>
+  <view class='p-table'>
+    <view class='p-row'>
+      <view class='p-col'>序号</view>
+      <view class='p-col'>产品名称</view>
+      <view class='p-col'>规格型号</view>
+      <view class='p-col'>单位</view>
+      <view class='p-col'>数量</view>
+      <view class='p-col'>单价(元)</view>
+      <view class='p-col'>总价(元)</view>
+    </view>
+    <view class='p-row'>
+      <view class='p-col'>1</view>
+      <view class='p-col'>斐讯NAS硬件设备</view>
+      <view class='p-col'>N1M</view>
+      <view class='p-col'>台</view>
+      <view class='p-col'>数量</view>
+      <view class='p-col'>1099</view>
+      <view class='p-col'></view>
+    </view>
+  </view>
+</scroll-view>

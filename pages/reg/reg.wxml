@@ -9,28 +9,31 @@
     </view>
 
     <view class='input-group'>
-      <text class='icon icon-user'></text>
-      <input id='username' class='input' placeholder='手机号' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <text class='icon icon-phone'></text>
+      <input id='username' class='input' value='{{ phone }}' placeholder='手机号' placeholder-style='color:#757575;font-size:32rpx;' bindinput='getPhone' bindblur='checkPhone'></input>
+      
     </view>
     <view class='input-group'>
-      <text class='icon icon-user'></text>
-      <input id='username' class='input' placeholder='验证码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <text class='icon icon-code'></text>
+      <input id='username' class='input msc' value='{{ code }}' bindinput='getCode' placeholder='验证码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <image mode='widthFix' class='codeimg' bindtap='changeCode' src='{{ codeURL }}'></image>
     </view>
     <view class='input-group'>
-      <text class='icon icon-user'></text>
-      <input id='username' class='input' placeholder='短信验证码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <text class='icon icon-msg'></text>
+      <input id='username' class='input msc' placeholder='短信验证码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <text class='sendCode' bindtap='sendMsgCode'>{{ msgcode }}</text>
     </view>
 
     <view class='input-group'>
       <text class='icon icon-pwd'></text>
-      <input id='username' type='password' class='input' placeholder='密码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <input id='username' type='password' value='{{ pwd }}' class='input' placeholder='密码' placeholder-style='color:#757575;font-size:32rpx;' bindinput='getPwd'></input>
     </view>
     <view class='input-group'>
       <text class='icon icon-pwd'></text>
-      <input id='username' type='password' class='input' placeholder='确认密码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <input id='username' type='password' value='{{ repwd }}' class='input' placeholder='确认密码' placeholder-style='color:#757575;font-size:32rpx;' bindinput='getRepwd' bindblur='checkPwd'></input>
     </view>
 
-    <button class='btn login'>创建账号</button>
+    <button class='btn login' bindtap='submit'>创建账号</button>
     <button class='btn reg'>返回登录</button>
 
   </view>

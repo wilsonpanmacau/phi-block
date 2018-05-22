@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "确认订单信息",
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "p": "/component/p/p"
+  }
+}
