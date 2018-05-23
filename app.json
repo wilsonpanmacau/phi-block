@@ -1,6 +1,11 @@
 {
   "pages":[
+    "pages/info/info",
+    "pages/me/me",
+    "pages/login/login",
     "pages/reg/reg",
+    
+    
     "pages/editPassword/editPassword",
     "pages/editEmail/editEmail",
     "pages/editPhone/editPhone",
@@ -17,18 +22,17 @@
     "pages/hostN1M/hostN1M",
     "pages/shopcart/shopcart",
     "pages/menu/menu",
-    "pages/me/me",
     
     
     
     "pages/password/password",
     "pages/edit/edit",
-    "pages/info/info",
+    
     "pages/address/address",
     "pages/addAddress/addAddress",
     "pages/order/order",
     "pages/forget/forget",
-    "pages/login/login",
+    
     "pages/c8/c8"
   ],
   "window":{

@@ -10,7 +10,8 @@
     </view>
 
     <view class='center nickname'>
-      <text>请先登录</text>
+      <text wx:if='{{ me === null}}'>请先登录</text>
+      <text wx:else>{{ me.user_name}}</text>
     </view>
 
     

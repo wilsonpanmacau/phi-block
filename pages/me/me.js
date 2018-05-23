@@ -5,13 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    me:null
   },
   myorder:function(e){
     
     wx.navigateTo({
       url: '../order/order?type=' + e.currentTarget.dataset.type,
     })
+
   },
   goPath:function(e){
     console.log('111');
@@ -23,7 +24,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // 从缓存中拿取数据
+    this.setData({
+      me:wx.getStorageSync('info')
+    })
   },
 
   /**

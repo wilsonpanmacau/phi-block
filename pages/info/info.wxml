@@ -7,15 +7,17 @@
     </view>
     <view class='item'>
       <text>昵称</text>
-      <text>马画藤</text>
+      <text>{{ me.user_name }}</text>
     </view>
     <view class='item'>
       <text>生日</text>
-      <text>1981-12-23</text>
+      <text wx:if="{{ me.birthday === null }}">暂无</text>
+      <text wx:else>{{ me.birthday}}</text>
     </view>
     <view class='item'>
       <text>性别</text>
-      <text>男</text>
+      <text wx:if = "{{ me.gender === null}}">保密</text>
+      <text wx:else>{{ me.gender }}</text>
     </view>
   </view>
   <button class='btn' bindtap='edit'>修改信息</button>

@@ -9,16 +9,16 @@
 
     <view class='input-group'>
       <text class='icon icon-user'></text>
-      <input id='username' class='input' placeholder='邮箱/手机号' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <input id='username' class='input' value='{{ phone }}' placeholder='邮箱/手机号' placeholder-style='color:#757575;font-size:32rpx;' bindinput='getPhone'></input>
     </view>
 
     <view class='input-group'>
       <text class='icon icon-pwd'></text>
-      <input id='username' type='password' class='input' placeholder='密码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <input id='username' type='password' class='input' value='{{ pwd }}' placeholder='密码' placeholder-style='color:#757575;font-size:32rpx;' bindinput='getPwd'></input>
     </view>
 
-    <button class='btn login'>登录</button>
-    <button class='btn reg'>注册</button>
+    <button class='btn login' bindtap='login'>登录</button>
+    <button class='btn reg' bindtap='reg'>注册</button>
 
     <view class='forget'>
       <text>忘记密码?</text>

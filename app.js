@@ -13,6 +13,9 @@ App({
   globalData: {
     userInfo: null,
     height:null,
-    baseUrl:'http://172.17.170.100/block/'
+    baseUrl:'http://172.17.170.100/block/',
+    header: {
+      'content-type': 'application/x-www-form-urlencoded'
+    }
   }
 })
