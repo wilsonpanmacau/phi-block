@@ -3,15 +3,15 @@
   <view>
     <view class='input-group'>
       <text class='label' style='padding-top: 5rpx;'>姓名</text>
-      <input class='input' placeholder='请输入收货人姓名' placeholder-class='pla' bindinput='getName'></input>
+      <input class='input' value='{{ name }}' placeholder='请输入收货人姓名' placeholder-class='pla' bindinput='getName'></input>
     </view>
     <view class='input-group'>
       <text class='label' style='padding-top: 5rpx;'>手机号码</text>
-      <input class='input' placeholder='请输入手机号码' placeholder-class='pla' bindinput='getPhone'></input>
+      <input class='input' value='{{ phone }}' placeholder='请输入手机号码' placeholder-class='pla' bindinput='getPhone'></input>
     </view>
     <view class='input-group'>
       <text class='label' style='padding-top: 5rpx;'>邮政编码</text>
-      <input class='input' placeholder='请输入邮政编码' placeholder-class='pla' bindinput='getZipcode'></input>
+      <input class='input' value='{{ zipcode }}' placeholder='请输入邮政编码' placeholder-class='pla' bindinput='getZipcode'></input>
     </view>
     <view class='input-group'>
       <text class='label'>所在区域</text>
@@ -23,7 +23,7 @@
     </view>
     <view class='input-group'>
       <text class='label' style='padding-top: 5rpx;'>详细地址</text>
-      <input class='input' placeholder='请输入详细地址' placeholder-class='pla' bindinput='getAddr'></input>
+      <input class='input' value='{{ addr }}' placeholder='请输入详细地址' placeholder-class='pla' bindinput='getAddr'></input>
     </view>
     <view class='input-group'>
       <text class='label' style='padding-top: 9rpx;'>设为默认</text>

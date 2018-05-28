@@ -6,6 +6,7 @@ Page({
    */
   data: {
     height:getApp().globalData.height,
+    count:0,
     operatings:[
       {
         icon:'http://cdn.phi-block.com/templates/default/images/cp_icon1.jpg',
@@ -94,7 +95,34 @@ Page({
     ],
     
   },
-
+  add:function(){
+    var _this = this;
+    this.setData({
+      count:++_this.data.count
+    },function(){
+      wx.request({
+        url: getApp().globalData.baseUrl+'product/addCart',
+        method:'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        data:{
+          pro_id:'1',
+          user_id:wx.getStorageSync("info").user_id
+        },
+        success:function(res){
+          console.log(res)
+        }
+      })
+    })
+  },
+  path:function(e){
+    console.log(e.currentTarget.dataset.url);
+    wx.switchTab({
+      url: e.currentTarget.dataset.url,
+    })
+   
+  },
   /**
    * 生命周期函数--监听页面加载
    */

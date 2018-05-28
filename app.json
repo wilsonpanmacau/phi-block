@@ -1,7 +1,16 @@
 {
   "pages":[
-    "pages/info/info",
+    "pages/shopcart/shopcart",
+    "pages/n1m/n1m",
     "pages/me/me",
+    
+    "pages/address/address",
+    "pages/editAddress/editAddress",
+    
+    "pages/addAddress/addAddress",
+    
+    "pages/info/info",
+    
     "pages/login/login",
     "pages/reg/reg",
     
@@ -11,7 +20,7 @@
     "pages/editPhone/editPhone",
     
     "pages/confirm/confirm",
-    "pages/n1m/n1m",
+    
     "pages/home/home",
     "pages/contact/contact",
     "pages/news/news",
@@ -20,7 +29,7 @@
     "pages/platinum/platinum",
     "pages/hostC8/hostC8",
     "pages/hostN1M/hostN1M",
-    "pages/shopcart/shopcart",
+    
     "pages/menu/menu",
     
     
@@ -28,8 +37,8 @@
     "pages/password/password",
     "pages/edit/edit",
     
-    "pages/address/address",
-    "pages/addAddress/addAddress",
+    
+    
     "pages/order/order",
     "pages/forget/forget",
     

@@ -6,48 +6,7 @@ Page({
    */
   data: {
     products:[
-      {
-        name:"天天链托管版N1M",
-        price:'2497.01',
-        count:1,
-        src:'http://www.phi-block.com/upload/news/1523832120918458645.png',
-        isSelect:false,
-      },
-      {
-        name: "以太算力服务器-C8",
-        price: '84000.00',
-        count: 1,
-        src: 'http://www.phi-block.com/upload/news/1523832130265190991.png',
-        isSelect: false,
-      },
-      {
-        name: "天天链托管版N1M",
-        price: '2497.01',
-        count: 1,
-        src: 'http://www.phi-block.com/upload/news/1523832120918458645.png',
-        isSelect: false,
-      },
-      {
-        name: "以太算力服务器-C8",
-        price: '84000.00',
-        count: 1,
-        src: 'http://www.phi-block.com/upload/news/1523832130265190991.png',
-        isSelect: false,
-      },
-      {
-        name: "天天链托管版N1M",
-        price: '2497.01',
-        count: 1,
-        src: 'http://www.phi-block.com/upload/news/1523832120918458645.png',
-        isSelect: false,
-      },
-      {
-        name: "以太算力服务器-C8",
-        price: '84000.00',
-        count: 1,
-        src: 'http://www.phi-block.com/upload/news/1523832130265190991.png',
-        isSelect: false,
-      }
+      
     ],
     isAllSelect:false,
     total:"0"
@@ -149,7 +108,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var _this = this;
+    wx.request({
+      url: getApp().globalData.baseUrl + 'product/cartList',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data:{
+        user_id:wx.getStorageSync('info').user_id
+      },
+      success:function(res){
+        console.log(res.data);
+        _this.setData({
+          products:res.data.data.products
+        })
+      }
+    })
   },
 
   /**

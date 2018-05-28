@@ -6,24 +6,41 @@ Page({
    */
   data: {
     address:[
-      {
-        name:'某某某',
-        phone:'18321845414',
-        isDefault:true,
-        address:'江西省南昌市东湖区xx路11号江西省南昌市东湖区xx路11号'
-      }
     ]
   },
   add:function(){
+   
     wx.navigateTo({
       url: '../addAddress/addAddress',
+    })
+  },
+  edit:function(e){
+    var _this = this;
+    wx.navigateTo({
+      url: '../editAddress/editAddress?address='+JSON.stringify(_this.data.address[e.currentTarget.dataset.index]),
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _this = this;
+    wx.request({
+      url: getApp().globalData.baseUrl +'address/list',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method:'POST',
+      data:{
+        user_id:wx.getStorageSync('info').user_id
+      },
+      success:function(res){
+        _this.setData({
+          address: res.data.data.addresses
+        })
+        console.log(res.data.data.addresses);
+      }
+    })
   },
 
   /**

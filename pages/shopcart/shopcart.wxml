@@ -11,11 +11,11 @@
 
     <view class='item clearfix'>
       <view class='pro-img'>
-        <image mode='widthFix' class='img' src='{{ item.src }}'></image>
+        <image mode='widthFix' class='img' src='{{ item.cover_img }}'></image>
       </view>
 
       <view class='wenzi'>
-        <view class='name'><text>{{ item.name }}</text></view>
+        <view class='name'><text>{{ item.pro_name }}</text></view>
         <view class='price'><text>售价：{{ item.price }}元</text></view>
         <view class='adddelete'>
           <text bindtap='deletea' data-index='{{ index }}'>-</text>

@@ -2,12 +2,12 @@
 <view>
   <view>
     <block wx:for='{{ address }}'>
-      <view class='address-item'>
+      <view class='address-item' bindtap='edit' data-index='{{ index }}'>
         <view class='item-top'>
           <text>{{ item.name}}</text><text>{{ item.phone}}</text>
         </view>
         <view class='item-bottom'>
-          <text>{{ item.isDefault?"[默认]":""}}</text><text>{{ item.address}}</text>
+          <text>{{ item.is_default === "1" ?"[默认]":""}}</text><text>{{ item.address.province + item.address.city + item.address.area + item.address.street}}</text>
         </view>
 
         <text class='icon right-icon'></text>

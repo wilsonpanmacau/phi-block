@@ -82,22 +82,54 @@ Page({
   },
   edit:function(){
     var _this = this;
-    wx.request({
-      url: getApp().globalData.baseUrl + 'user/edit',
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      method: 'POST',
-      data:{
-        user_id: wx.getStorageSync('info').user_id,
-        user_name:_this.data.name,
-        birthday: _this.data.date === "请输入日期" ? null : _this.data.date,
-        gender: _this.data.select === 'secret' ? null : _this.data.select,
-      },
-      success:function(res){
-        console.log(res.data);
-      }
-    })
+    // 昵称不能为空
+    if(this.data.name === ''){
+      // 
+      wx.showToast({
+        title: '昵称不能为空',
+        icon:'none'
+      })
+    }else{
+      wx.request({
+        url: getApp().globalData.baseUrl + 'user/edit',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        method: 'POST',
+        data: {
+          user_id: wx.getStorageSync('info').user_id,
+          user_name: _this.data.name,
+          birthday: _this.data.date === "请输入日期" ? null : _this.data.date,
+          gender: _this.data.select === 'secret' ? null : _this.data.select,
+        },
+        success: function (res) {
+          console.log(res.data);
+          if(res.data.status){
+            // 修改成功
+            // 重新将信息保存到缓存
+            // ...
+            wx.setStorageSync('info', res.data.data);
+            wx.showToast({
+              title: res.data.msg,
+              icon: 'none',
+              success:function(){
+                wx.navigateBack({
+                  delta:1
+                })
+              }
+            })
+            
+          }else{
+            // 修改失败
+            wx.showToast({
+              title: res.data.msg,
+              icon: 'none'
+            })
+          }
+        }
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
