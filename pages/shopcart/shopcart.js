@@ -11,28 +11,112 @@ Page({
     isAllSelect:false,
     total:"0"
   },
+  // 下单
+  gopay:function(){
+    var arr = [];
+    for(var i = 0;i<this.data.products.length;i++){
+      if (this.data.products[i].isSelect){
+        arr.push(this.data.products[i])
+      }
+    }
+    // 
+    if(arr.length === 0){
+      wx.showToast({
+        title: '未选中任何产品',
+        icon:'none'
+      })
+    }else{
+      wx.navigateTo({
+        url: '../confirm/confirm?list=' + JSON.stringify(arr),
+      })
+    }
+    
+  },
   add:function(e){
     var _this = this;
+
+    // 购物车产品+1 
     var index = parseInt(e.currentTarget.dataset.index);
-    this.data.products[index].count = this.data.products[index].count + 1;
-    this.setData({
-      products: _this.data.products
+    wx.showLoading({
+      title: '',
     })
-    this.caculateTotalMoney();
+      wx.request({
+        url: getApp().globalData.baseUrl + 'product/addCart',
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        data: {
+          pro_id: _this.data.products[index].pro_id,
+          user_id: wx.getStorageSync("info").user_id
+        },
+        success: function (res) {
+          console.log(res);
+          wx.hideLoading();
+          _this.data.products[index].count = parseInt(_this.data.products[index].count) + 1;
+          _this.setData({
+            products: _this.data.products
+          })
+          _this.caculateTotalMoney();
+        }
+      })
+   
+
+    
   },
   deletea: function (e) {
     var _this = this;
     var index = parseInt(e.currentTarget.dataset.index);
-    if (this.data.products[index].count === 1){
+    
+    
+    wx.showLoading({
+      title: '',
+    })
+
+    if (this.data.products[index].count == 1){
       // 当前数量是1，当再次减1时，即从购物车中删除该产品
-      this.deleteProduct(index);
+      // this.deleteProduct(index);
+      wx.request({
+        url: getApp().globalData.baseUrl + 'product/remove',
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        data: {
+          pro_id: _this.data.products[index].pro_id,
+          user_id: wx.getStorageSync("info").user_id
+        },
+        success: function (res) {
+          console.log(res.data);
+          wx.hideLoading();
+          _this.deleteProduct(index);
+        }
+      })
+      
     }else{
-      this.data.products[index].count = this.data.products[index].count - 1;
+      // this.data.products[index].count = this.data.products[index].count - 1;
+      wx.request({
+        url: getApp().globalData.baseUrl + 'product/reduce',
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        data: {
+          pro_id: _this.data.products[index].pro_id,
+          user_id: wx.getStorageSync("info").user_id
+        },
+        success: function (res) {
+          console.log(res.data);
+          wx.hideLoading();
+          _this.data.products[index].count = parseInt(_this.data.products[index].count) - 1;
+          _this.setData({
+            products: _this.data.products
+          })
+          _this.caculateTotalMoney();
+        }
+      })
     }
     
-    this.setData({
-      products: _this.data.products
-    })
     this.caculateTotalMoney();
   },
   select:function(e){
@@ -108,23 +192,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var _this = this;
-    wx.request({
-      url: getApp().globalData.baseUrl + 'product/cartList',
-      method: 'POST',
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      data:{
-        user_id:wx.getStorageSync('info').user_id
-      },
-      success:function(res){
-        console.log(res.data);
-        _this.setData({
-          products:res.data.data.products
-        })
-      }
-    })
+    
   },
 
   /**
@@ -138,7 +206,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var _this = this;
+    console.log("购物车");
+    wx.request({
+      url: getApp().globalData.baseUrl + 'product/cartList',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        user_id: wx.getStorageSync('info').user_id
+      },
+      success: function (res) {
+        console.log(res.data);
+        _this.setData({
+          products: res.data.data.products
+        })
+      }
+    })
   },
 
   /**

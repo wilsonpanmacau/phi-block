@@ -7,3 +7,22 @@
     </view>
   </block>
 </view>
+
+<scroll-view scroll-y class='scroll'>
+  <view class='order-item' wx:for='{{ list }}'>
+      <view class='t'>
+        <text>下单时间：{{ item.generate_time }}</text>
+        <text>{{ item.status }}</text>
+      </view>
+      <view class='p-box' wx:for="{{ item.product_list }}" wx:for-item='product'>
+        <view class='img-box'>
+          <image mode='widthFix' class='img' src='{{ product.img }}'></image>
+        </view>
+        <view class='wenzi'>
+          <view class='w'><text>{{ product.pro_name }}</text></view>
+          <view class='w w_p'><text>价格：{{ product.price }}元</text></view>
+          <text class='count'>x{{ product.count}}</text>
+        </view>
+      </view>
+  </view>
+</scroll-view>

@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    count:0,
     config:[
       {
         name:'额定算力',
@@ -111,6 +112,34 @@ Page({
         date: '2018-04-16'
       }
     ]
+  },
+  add: function () {
+    var _this = this;
+    this.setData({
+      count: ++_this.data.count
+    }, function () {
+      wx.request({
+        url: getApp().globalData.baseUrl + 'product/addCart',
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        data: {
+          pro_id: '2',
+          user_id: wx.getStorageSync("info").user_id
+        },
+        success: function (res) {
+          console.log(res)
+        }
+      })
+    })
+  },
+  path: function (e) {
+    console.log(e.currentTarget.dataset.url);
+    wx.switchTab({
+      url: e.currentTarget.dataset.url,
+    })
+
   },
 
   /**

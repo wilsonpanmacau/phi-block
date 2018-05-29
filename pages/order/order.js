@@ -27,6 +27,7 @@ Page({
         style: 'w2'
       }
     ],
+    list:[],
     active_index:0
   },
   select:function(e){
@@ -38,9 +39,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _this= this;
     console.log(options);
     this.setData({
       active_index:parseInt(options.type)
+    },function(){
+      wx.request({
+        url: getApp().globalData.baseUrl + 'order/list',
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        data:{
+          user_id:wx.getStorageSync('info').user_id
+        },
+        success:function(res){
+          console.log(res.data);
+          _this.setData({
+            list:res.data.data.orders
+          })
+        }
+      })
     })
   },
 

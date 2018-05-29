@@ -1,18 +1,20 @@
 <!--pages/confirm/confirm.wxml-->
 <scroll-view scroll-y class='content'>
   <view class='address'>
-    <p><text class='name'>顾桂贵</text><text class='phone'>18321845414</text></p>
-    <p class='detail-address'><text>上海</text><text>上海市</text><text>松江区</text><text>多少路多少号</text></p>
-    <p class='edit'><text>修改</text></p>
+    
+    <view><text class='name'>{{ address.name }}</text><text class='phone'>{{  address.phone }}</text></view>
+    <view class='detail-address'><text>{{ address.address.province}}</text><text>{{  address.address.city}}</text><text>{{ address.address.area}}</text><text>{{  address.address.street }}</text></view>
+    <view class='edit'><text>修改</text></view>
     <text class='icon icon-right'></text>
   </view>
   <view class='gray'></view>
   <p class='invoice'><text>发票</text><text class='a icon icon-down'></text><text class='a'>个人</text></p>
   <view class='gray'></view>
-  <view class='product'><image class='img1' mode='widthFix' src='http://www.phi-block.com/upload/news/1523832120918458645.png'></image>
-     <text>天天链托管版N1M</text>
-     <text class='a'>4994.00元</text>
+  <view class='product' wx:for='{{ list }}'><image class='img1' mode='widthFix' src='{{ item.cover_img }}'></image>
+     <text>{{ item.pro_name }}</text>
+     <text class='a'>{{ item.count * item.price }}元</text>
   </view>
+  
   <view class='gray'></view>
   <view class='msg'>
     <p>备注信息</p>
@@ -28,12 +30,12 @@
 </scroll-view>
 <view class='bottom'>
   <view class='money'>
-    <text>产品总额：4994.00元</text>
+    <text>产品总额：{{ total }}元</text>
   </view>
-  <view class='submit'>提交订单</view>
+  <view class='submit' bindtap='add'>提交订单</view>
 </view>
 
-<view class='modal'>
+<view class='modal' style='display:none'>
   <view>
     <view class='modal-info'>
       <p style='margin-bottom:20rpx;'>请您仔细阅读以下信息提示：</p>
@@ -46,7 +48,7 @@
     </view>
   </view>
 </view>
-<scroll-view scroll-y class='protocol-detail'>
+<scroll-view scroll-y class='protocol-detail' style='display:none'>
   <p class='p-t'>销售合同条款预览</p>
   <p class='p-c'>乙方：上海斐阅信息技术有限公司</p>
   <p class='p-c'>地址：<text class='u'>上海市普陀区同普路1030号3号楼1楼103室</text></p>
