@@ -10,7 +10,7 @@
     </view>
 
     <view class='center nickname'>
-      <text wx:if='{{ me === null}}'>请先登录</text>
+      <text wx:if='{{ me === null || me === "" }}' bindtap='goPath' data-path='../login/login'>登录/注册</text>
       <text wx:else>{{ me.user_name}}</text>
     </view>
 
@@ -42,6 +42,10 @@
   </view>
   <view class='me-item' bindtap='goPath' data-path='../password/password'>
       <text class='icon icon-pwd'></text><text class='t'>修改密码</text>
+      <text class='left icon left-icon'></text>
+  </view>
+  <view class='me-item' bindtap='quit'>
+      <text class='icon icon-quit'></text><text class='t'>退出当前账户</text>
       <text class='left icon left-icon'></text>
   </view>
 

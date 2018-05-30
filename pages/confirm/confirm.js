@@ -7,9 +7,14 @@ Page({
   data: {
     check:false,
     list:[],
-    address:{},
+    address:null,
     total:0,
     name1:'111'
+  },
+  addAddress:function(){
+    wx.navigateTo({
+      url: '../addAddress/addAddress',
+    })
   },
   add:function(){
     var _this = this;
@@ -63,30 +68,7 @@ Page({
    */
   onLoad: function (options) {
     var _this = this;
-    // 获取默认地址
-    wx.request({
-      url: getApp().globalData.baseUrl + 'address/list',
-      method: 'POST',
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      data: {
-        user_id: wx.getStorageSync("info").user_id
-      },
-      success: function (res) {
-        console.log(res.data);
-        for (var i = 0; i < res.data.data.addresses.length; i++) {
-          if (res.data.data.addresses[i].is_default == 1) {
-            console.log('1111');
-            _this.setData({
-              
-              address: res.data.data.addresses[i]
-            })
-            break;
-          }
-        }
-      }
-    })
+    
     this.setData({
       list: JSON.parse(options.list)
     },function(){
@@ -114,7 +96,33 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    console.log('我回来了')
+    var _this = this;
+    // 获取地址
+    // 获取默认地址
+    wx.request({
+      url: getApp().globalData.baseUrl + 'address/list',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        user_id: wx.getStorageSync("info").user_id
+      },
+      success: function (res) {
+        console.log(res.data);
+        for (var i = 0; i < res.data.data.addresses.length; i++) {
+          if (res.data.data.addresses[i].is_default == 1) {
+            console.log('1111');
+            _this.setData({
+
+              address: res.data.data.addresses[i]
+            })
+            break;
+          }
+        }
+      }
+    })
   },
 
   /**

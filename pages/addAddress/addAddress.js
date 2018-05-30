@@ -74,12 +74,7 @@ Page({
           // 添加成功
           wx.showToast({
             title: '添加成功',
-            icon:'none',
-            success:function(){
-              wx.redirectTo({
-                url: '../address/address',
-              })
-            }
+            icon:'none'
           })
         }else{
           // 添加失败

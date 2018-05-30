@@ -208,6 +208,9 @@ Page({
   onShow: function () {
     var _this = this;
     console.log("购物车");
+    wx.showLoading({
+      title: '加载数据...',
+    })
     wx.request({
       url: getApp().globalData.baseUrl + 'product/cartList',
       method: 'POST',
@@ -219,6 +222,7 @@ Page({
       },
       success: function (res) {
         console.log(res.data);
+        wx.hideLoading();
         _this.setData({
           products: res.data.data.products
         })

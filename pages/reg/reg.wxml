@@ -34,7 +34,7 @@
     </view>
 
     <button class='btn login' bindtap='submit'>创建账号</button>
-    <button class='btn reg'>返回登录</button>
+    <button class='btn reg' bindtap='back'>返回登录</button>
 
   </view>
 </view>

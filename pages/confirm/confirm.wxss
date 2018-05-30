@@ -12,6 +12,9 @@
   font-size: 28rpx;
   border-bottom: 1px solid #f1f1f1;
   position: relative;
+  background: #fff;
+  padding-left: 90rpx;
+  padding-right: 70rpx;
 }
 .phone{
   margin-left: 20rpx;
@@ -20,9 +23,6 @@
   font-size: 24rpx;
   color: #888;
   margin-top: 10rpx;
-}
-.detail-address text{
-  margin-right: 10rpx;
 }
 .edit{
   font-size: 24rpx;
@@ -205,4 +205,11 @@ checkbox-group{
 }
 .p-col{
   display: table-cell;
+}
+.icon-addr::after{
+  content: '\e657';
+}
+.icon-addr{
+  left: 30rpx;
+  font-size: 40rpx;
 }

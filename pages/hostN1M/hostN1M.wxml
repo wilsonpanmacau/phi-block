@@ -1,6 +1,22 @@
 <!--pages/hostN1M/hostN1M.wxml-->
+<view class='bottom-add'>
+    <view class='bottom-l'>
+    <view bindtap='path' data-url="../home/home">
+        <text class='icon home'></text>
+        <text>首页</text>
+      </view>
+      <view class='carta' bindtap='path' data-url="../shopcart/shopcart">
+        <text class='icon shopcart'></text>
+        <text>购物车</text>
+        <text class='count' wx:if='{{ count !== 0 }}'>{{ count }}</text>
+      </view>
+    </view>
+    <view class='bottom-r' bindtap='add'>
+        加入购物车
+    </view>
+</view>
 <scroll-view class='wrapper-scroll' scroll-y = 'true'>
-  <text class='buy'><text class='icon shopcart'></text>立即购买</text>
+  
   <view class='n1m'>
      <image class='img' mode='widthFix' src='http://cdn.phi-block.com/templates/default/images/phone_pro_banner2.gif'></image>
   </view>

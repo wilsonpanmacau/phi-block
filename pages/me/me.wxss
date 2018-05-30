@@ -96,3 +96,6 @@
 .me-item .left{
   color: #aaa;
 }
+.icon-quit::after{
+  content: "\e64b";
+}

@@ -73,6 +73,11 @@ Page({
       
     }
   },
+  reg:function(e){
+    wx.navigateTo({
+      url: '../reg/reg',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

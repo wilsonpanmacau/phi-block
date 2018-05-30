@@ -16,10 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 从缓存中拿取数据
-    this.setData({
-      me: wx.getStorageSync('info')
-    })
+    
   },
 
   /**
@@ -33,7 +30,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    // 从缓存中拿取数据
+    this.setData({
+      me: wx.getStorageSync('info')
+    })
   },
 
   /**

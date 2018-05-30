@@ -9,25 +9,62 @@ Page({
   },
   myorder:function(e){
     
+    if(this.data.me == null || this.data.me == ''){
+      wx.showToast({
+        title: '未登录',
+        icon:'none'
+      })
+      return ;
+    }
+
     wx.navigateTo({
       url: '../order/order?type=' + e.currentTarget.dataset.type,
     })
 
   },
   goPath:function(e){
+    if (this.data.me == null || this.data.me == '') {
+      wx.showToast({
+        title: '未登录',
+        icon: 'none'
+      })
+      return;
+    }
     console.log('111');
     wx.navigateTo({
       url: e.currentTarget.dataset.path,
+    })
+  },
+  quit:function(){
+    if (this.data.me == null || this.data.me == '') {
+      wx.showToast({
+        title: '未登录',
+        icon: 'none'
+      })
+      return;
+    }
+    wx.showModal({
+      title: '提示',
+      content: '确认退出?',
+      success:function(res){
+        
+        if(res.confirm){
+          // 确认
+          wx.removeStorageSync('info');
+          wx.switchTab({
+            url: '../home/home',
+          })
+        }else{
+          // 取消
+        }
+      }
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 从缓存中拿取数据
-    this.setData({
-      me:wx.getStorageSync('info')
-    })
+    
   },
 
   /**
@@ -41,7 +78,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    // 从缓存中拿取数据
+    this.setData({
+      me: wx.getStorageSync('info')
+    })
   },
 
   /**

@@ -1,12 +1,18 @@
 <!--pages/confirm/confirm.wxml-->
 <scroll-view scroll-y class='content'>
-  <view class='address'>
+  <view class='address' wx:if='{{ address != null && address !="" }}'>
     
     <view><text class='name'>{{ address.name }}</text><text class='phone'>{{  address.phone }}</text></view>
     <view class='detail-address'><text>{{ address.address.province}}</text><text>{{  address.address.city}}</text><text>{{ address.address.area}}</text><text>{{  address.address.street }}</text></view>
-    <view class='edit'><text>修改</text></view>
+    <text class='icon icon-addr'></text>
     <text class='icon icon-right'></text>
   </view>
+
+  <view wx:else class='address'>
+      <text>暂无收货地址</text>
+      <text bindtap='addAddress' style='float:right;'>添加</text><text bindtap='addAddress' class='icon icon-right'></text>
+  </view>
+
   <view class='gray'></view>
   <p class='invoice'><text>发票</text><text class='a icon icon-down'></text><text class='a'>个人</text></p>
   <view class='gray'></view>

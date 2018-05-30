@@ -12,9 +12,9 @@
   <view class='order-item' wx:for='{{ list }}'>
       <view class='t'>
         <text>下单时间：{{ item.generate_time }}</text>
-        <text>{{ item.status }}</text>
+        <text>{{ item.status_text }}</text>
       </view>
-      <view class='p-box' wx:for="{{ item.product_list }}" wx:for-item='product'>
+      <view class='p-box {{ id !== item.product_list.length -1 ? "bb":"" }}'  wx:for="{{ item.product_list }}" wx:for-index='id' wx:for-item='product'>
         <view class='img-box'>
           <image mode='widthFix' class='img' src='{{ product.img }}'></image>
         </view>
@@ -26,3 +26,5 @@
       </view>
   </view>
 </scroll-view>
+
+<view class='no-data' wx:if='{{ list.length === 0 }}'><text>暂无数据</text></view>

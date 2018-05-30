@@ -97,24 +97,36 @@ Page({
   },
   add:function(){
     var _this = this;
-    this.setData({
-      count:++_this.data.count
-    },function(){
-      wx.request({
-        url: getApp().globalData.baseUrl+'product/addCart',
-        method:'POST',
-        header: {
-          'content-type': 'application/x-www-form-urlencoded'
-        },
-        data:{
-          pro_id:'1',
-          user_id:wx.getStorageSync("info").user_id
-        },
-        success:function(res){
-          console.log(res)
-        }
-      })
+    wx.showLoading({
+      title: '',
     })
+    wx.request({
+      url: getApp().globalData.baseUrl + 'product/addCart',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        pro_id: '1',
+        user_id: wx.getStorageSync("info").user_id
+      },
+      success: function (res) {
+        console.log(res);
+        wx.hideLoading();
+        if(res.data.status){
+          _this.setData({
+            count: ++_this.data.count
+          })
+        }else{
+          wx.showToast({
+            title: '添加失败',
+            icon:'none'
+          })
+        }
+      }
+    })
+    
+    
   },
   path:function(e){
     console.log(e.currentTarget.dataset.url);

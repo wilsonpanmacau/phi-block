@@ -149,7 +149,7 @@ Page({
         method:'POST',
         data:{
           password:_this.data.pwd,
-          phone:_this.data.phonw,
+          phone:_this.data.phone,
           captcha:_this.data.code
         },
         success:function(res){
@@ -196,6 +196,11 @@ Page({
         }
       })
     }
+  },
+  back:function(){
+    wx.navigateBack({
+      delta:1
+    })
   },
   /**
    * 生命周期函数--监听页面加载

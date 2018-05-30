@@ -43,6 +43,20 @@
   bottom: 0;
   background: #f9f9f9;
 }
+.no-data{
+  position: fixed;
+  top: 80rpx;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #666;
+}
 .order-item{
   margin-top: 20rpx;
   padding:0 30rpx;
@@ -63,6 +77,9 @@
 .p-box{
   padding: 20rpx 0;
   display: flex;
+  
+}
+.bb{
   border-bottom: 1px dashed #f1f1f1;
 }
 .img-box{
