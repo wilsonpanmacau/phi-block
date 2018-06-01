@@ -13,7 +13,7 @@ Page({
   },
   addAddress:function(){
     wx.navigateTo({
-      url: '../addAddress/addAddress',
+      url: '../c_addAddress/c_addAddress',
     })
   },
   add:function(){
@@ -111,11 +111,13 @@ Page({
       },
       success: function (res) {
         console.log(res.data);
+        if(!res.data.status){
+          return ;
+        }
         for (var i = 0; i < res.data.data.addresses.length; i++) {
           if (res.data.data.addresses[i].is_default == 1) {
             console.log('1111');
             _this.setData({
-
               address: res.data.data.addresses[i]
             })
             break;

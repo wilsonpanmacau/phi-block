@@ -1,33 +1,23 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/changeAddress/changeAddress",
+    "pages/me/me",
+    "pages/editAddress/editAddress",
     "pages/order/order",
     "pages/shopcart/shopcart",
     "pages/confirm/confirm",
-    
+    "pages/c_addAddress/c_addAddress",
     "pages/c8/c8",
-    
     "pages/n1m/n1m",
-    "pages/me/me",
-    
     "pages/address/address",
-    "pages/editAddress/editAddress",
-    
     "pages/addAddress/addAddress",
-    
     "pages/info/info",
-    
     "pages/login/login",
     "pages/reg/reg",
-    
-    
     "pages/editPassword/editPassword",
     "pages/editEmail/editEmail",
-    "pages/editPhone/editPhone",
-    
-    
-    
-    
+    "pages/editPhone/editPhone",  
     "pages/contact/contact",
     "pages/news/news",
     "pages/service/service",
@@ -35,20 +25,10 @@
     "pages/platinum/platinum",
     "pages/hostC8/hostC8",
     "pages/hostN1M/hostN1M",
-    
     "pages/menu/menu",
-    
-    
-    
     "pages/password/password",
     "pages/edit/edit",
-    
-    
-    
-    
     "pages/forget/forget"
-    
-    
   ],
   "window":{
     "backgroundTextStyle":"light",

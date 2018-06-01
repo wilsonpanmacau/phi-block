@@ -13,7 +13,7 @@ App({
   globalData: {
     userInfo: null,
     height:null,
-    baseUrl:'http://172.17.170.100/block/',
+    baseUrl:'https://phichattest.phicomm.com/block/',
     header: {
       'content-type': 'application/x-www-form-urlencoded'
     }

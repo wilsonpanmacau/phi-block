@@ -12,7 +12,6 @@ Page({
     zipcode: '',
     addr: '',
     isDefault: false,
-    id:''
   },
   bindRegionChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -51,13 +50,12 @@ Page({
     var _this = this;
     console.log(wx.getStorageSync('info'));
     wx.request({
-      url: getApp().globalData.baseUrl + 'address/edit',
+      url: getApp().globalData.baseUrl + 'address/add',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
       data: {
         user_id: wx.getStorageSync('info').user_id,
-        address_id:_this.data.id,
         name: _this.data.name,
         address: JSON.stringify({
           "province": _this.data.region[0],
@@ -75,13 +73,11 @@ Page({
         if (res.data.status) {
           // 添加成功
           wx.showToast({
-            title: '编辑成功',
-            icon: 'none',
-            success: function () {
-              wx.navigateBack({
-                delta:1
-              })
-            }
+            title: '添加成功',
+            icon: 'none'
+          })
+          wx.navigateBack({
+              delta:1
           })
         } else {
           // 添加失败
@@ -97,17 +93,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(JSON.parse(options.address));
-   
-    this.setData({
-      name: JSON.parse(options.address).name,
-      phone: JSON.parse(options.address).phone,
-      zipcode: JSON.parse(options.address).zip_code,
-      isDefault: JSON.parse(options.address).is_default === '1' ? true:false,
-      region: [JSON.parse(options.address).address.province, JSON.parse(options.address).address.city, JSON.parse(options.address).address.area],
-      addr: JSON.parse(options.address).address.street,
-      id: JSON.parse(options.address).address_id
-    })
+
   },
 
   /**

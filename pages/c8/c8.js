@@ -114,6 +114,13 @@ Page({
     ]
   },
   add: function () {
+    if (wx.getStorageSync("info") == null || wx.getStorageSync("info") == '' || wx.getStorageSync("info") == undefined){
+      wx.showToast({
+        title: '未登录',
+        icon:'none'
+      })
+      return ;
+    }
     var _this = this;
     this.setData({
       count: ++_this.data.count

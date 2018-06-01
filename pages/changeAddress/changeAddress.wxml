@@ -2,8 +2,8 @@
 <scroll-view scroll-y class='scroll' wx:if='{{ address.length !== 0}}'>
 
     <block wx:for='{{ address }}'>
-      <view class='address-item {{ isEdit ? "edit":"" }} {{ icons[index].isSelect ? "aa":"" }}'  bindtap='edit' data-index='{{ index }}'>
-        <text bindtap='select_delete' data-index='{{ index }}' class='icon a-icon {{ isEdit ? "icon-show":" " }} {{ icons[index].isSelect ? "icon-a-select":"icon-a-unselect" }}'></text>
+      <view class='address-item'>
+        <text bindtap='select_delete' data-index='{{ index }}' class='icon a-icon icon-show {{ icons[index].isSelect ? "icon-a-select":"icon-a-unselect" }}'></text>
         <view class='item-top'>
           <text>{{ item.name}}</text><text>{{ item.phone}}</text>
         </view>
@@ -11,7 +11,7 @@
           <text class='default'>{{ item.is_default === "1" ?"[默认]":""}}</text><text>{{ item.address.province + item.address.city + item.address.area + item.address.street}}</text>
         </view>
 
-        <text class='icon right-icon'></text>
+        <text class='icon right-icon' bindtap='edit' data-index='{{ index }}'></text>
       </view>
     </block>
 
@@ -24,7 +24,7 @@
   <text>暂无收货地址</text>
 </view>
 
-<view class='a-btns' wx:if='{{ isEdit }}'>
+<view class='a-btns' wx:if='{{ address.length !== 0}}'>
 
   <view bindtap='deletea'>
     <text>取消</text>
@@ -36,11 +36,9 @@
 </view>
 
 <view class='a-btns' wx:else>
-  <view bindtap='deletea'>
-    <text>编辑</text>
-  </view>
+  
   <view bindtap='add'>
-    <text class='icon icon-add'></text><text>添加</text>
+    <text>添加</text>
   </view>
 
 </view>

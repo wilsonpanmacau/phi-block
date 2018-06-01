@@ -18,36 +18,14 @@
   vertical-align: middle;
 }
 .add{
-  height: 140rpx;
-  line-height: 140rpx;
-  font-size: 32rpx;
-  color: #fff;
-  text-align: center;
-}
-.add text{
-  background: #348ce6;
-  padding: 10rpx 30rpx;
-}
-
-
-.a-btns{
   position: fixed;
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   height: 100rpx;
-  display: flex;
-  box-shadow: 0px -1px 20px 2px rgba(0, 0, 0, 0.1);
-}
-.a-btns>view{
-  flex: 1;
-  text-align: center;
   line-height: 100rpx;
-  color: #348ce6;
-  letter-spacing: 5px;
   font-size: 32rpx;
-}
-.a-btns>view:nth-child(2){
   color: #fff;
-  background: #348ce6;
+  text-align: center;
+   background: #348ce6;
 }

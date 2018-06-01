@@ -7,6 +7,11 @@ Page({
   data: {
     me:null
   },
+  login:function(){
+    wx.navigateTo({
+      url: '../login/login',
+    })
+  },
   myorder:function(e){
     
     if(this.data.me == null || this.data.me == ''){

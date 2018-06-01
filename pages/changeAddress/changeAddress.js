@@ -5,53 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-    address:[],
-    isEdit:false,
-    icons:[]
+    address: [],
+
+    icons: []
   },
-  add:function(){
-   
+  add: function () {
+
     wx.navigateTo({
       url: '../addAddress/addAddress',
     })
   },
-  edit:function(e){
+  edit: function (e) {
     var _this = this;
-
-    if(this.data.isEdit){
-      // 如果当前是编辑状态，则不跳转到编辑页面
-      this.select_delete(parseInt(e.currentTarget.dataset.index));
-      return;
-
-    }
 
     wx.navigateTo({
-      url: '../editAddress/editAddress?address='+JSON.stringify(_this.data.address[e.currentTarget.dataset.index]),
+      url: '../editAddress/editAddress?address=' + JSON.stringify(_this.data.address[e.currentTarget.dataset.index]),
     })
   },
-  // 设置为可删除状态
   deletea:function(){
-    var _this = this;
-    this.setData({
-      isEdit:!_this.data.isEdit
+    wx.navigateBack({
+      delta:1
     })
   },
   // 删除操作
-  submit_delete:function(){
+  submit_delete: function () {
     var id_arr = [];
     var _this = this;
-    for(let i =0;i<this.data.icons.length;i++){
-      if(this.data.icons[i].isSelect){
+    for (let i = 0; i < this.data.icons.length; i++) {
+      if (this.data.icons[i].isSelect) {
         id_arr.push(parseInt(this.data.address[i].address_id));
       }
     }
-    if(id_arr.length == 0){
+    if (id_arr.length == 0) {
       wx.showToast({
         title: '未选择',
-        icon:'none'
+        icon: 'none'
       })
-      return ;
-    }else{
+      return;
+    } else {
       wx.showLoading({
         title: '删除中'
       })
@@ -60,24 +51,22 @@ Page({
         header: {
           'content-type': 'application/x-www-form-urlencoded'
         },
-        method:'post',
-        data:{
-          user_id:wx.getStorageSync('info').user_id,
-          address_id:JSON.stringify(id_arr)
+        method: 'post',
+        data: {
+          user_id: wx.getStorageSync('info').user_id,
+          address_id: JSON.stringify(id_arr)
         },
-        success:function(res){
-          if(res.data.status){
+        success: function (res) {
+          if (res.data.status) {
             wx.hideLoading();
-            _this.setData({
-              isEdit:false
-            },function(){
-              _this.getAddress();
-            })
-          }else{
+          
+            _this.getAddress();
+        
+          } else {
             wx.hideLoading();
             wx.showToast({
               title: res.data.msg,
-              icon:'none'
+              icon: 'none'
             })
           }
         }
@@ -89,20 +78,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  getAddress:function(){
+  getAddress: function () {
     var _this = this;
     wx.showLoading({
       title: '加载数据...',
@@ -117,9 +106,9 @@ Page({
         user_id: wx.getStorageSync('info').user_id
       },
       success: function (res) {
-        if(!res.data.status){
+        if (!res.data.status) {
           wx.hideLoading();
-          return ;
+          return;
         }
         var icons = [];
         console.log(res.data.data.addresses);
@@ -137,45 +126,54 @@ Page({
   onShow: function () {
     this.getAddress();
   },
-  select_delete:function(index){
+  select_delete: function (e) {
+    console.log(e);
     var arr = this.data.icons;
-    arr[index].isSelect = !this.data.icons[index].isSelect;
+    for (let i = 0; i < this.data.icons.length;i++){
+      if(i != e.currentTarget.dataset.index){
+        arr[i].isSelect = false;
+      }else{
+        arr[i].isSelect = !arr[i].isSelect;
+      }
+      
+    }
+    console.log(arr);
     this.setData({
-      icons:arr
+      icons: arr
     })
   },
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

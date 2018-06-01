@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    count:0,
     process:[
       {
         text:'工厂下单',
@@ -57,7 +58,49 @@ Page({
       }
     ]
   },
-
+  add:function(){
+    if (wx.getStorageSync("info") == null || wx.getStorageSync("info") == '' || wx.getStorageSync("info") == undefined) {
+      wx.showToast({
+        title: '未登录',
+        icon: 'none'
+      })
+      return;
+    }
+    var _this = this;
+    wx.showLoading({
+      title: '',
+    })
+    wx.request({
+      url: getApp().globalData.baseUrl + 'product/addCart',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        pro_id: '4',
+        user_id: wx.getStorageSync("info").user_id
+      },
+      success: function (res) {
+        console.log(res);
+        wx.hideLoading();
+        if (res.data.status) {
+          _this.setData({
+            count: ++_this.data.count
+          })
+        } else {
+          wx.showToast({
+            title: '添加失败',
+            icon: 'none'
+          })
+        }
+      }
+    })
+  },
+  path: function (e) {
+    wx.switchTab({
+      url: e.currentTarget.dataset.url,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

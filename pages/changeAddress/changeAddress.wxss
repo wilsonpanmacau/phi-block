@@ -14,10 +14,9 @@
   border-bottom: 1px solid #d8d8d8;
   background: #fff;
   transition: all 0.3s;
-}
-.edit{
   padding-left: 100rpx;
 }
+
 .aa .item-top,.aa .item-bottom{
   color: #ccc;
 }
@@ -100,6 +99,7 @@
   top: 50%;
   transform: translate(0,-50%);
   transition: all 0.3s;
+  z-index: 9999;
 }
 .address-item .icon-show{
   left: 30rpx;

@@ -206,6 +206,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    if (wx.getStorageSync("info") == null || wx.getStorageSync("info") == '' || wx.getStorageSync("info") == undefined) {
+      
+      return;
+    }
     var _this = this;
     console.log("购物车");
     wx.showLoading({
@@ -223,9 +227,11 @@ Page({
       success: function (res) {
         console.log(res.data);
         wx.hideLoading();
-        _this.setData({
-          products: res.data.data.products
-        })
+        if(res.data.status){
+          _this.setData({
+            products: res.data.data.products
+          })
+        }
       }
     })
   },

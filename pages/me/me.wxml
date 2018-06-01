@@ -10,7 +10,7 @@
     </view>
 
     <view class='center nickname'>
-      <text wx:if='{{ me === null || me === "" }}' bindtap='goPath' data-path='../login/login'>登录/注册</text>
+      <text wx:if='{{ me === null || me === "" }}' bindtap='login'>登录/注册</text>
       <text wx:else>{{ me.user_name}}</text>
     </view>
 
