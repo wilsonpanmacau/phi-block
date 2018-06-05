@@ -15,12 +15,12 @@
     </view>
     <view class='input-group'>
       <text class='icon icon-code'></text>
-      <input id='username' class='input msc' value='{{ code }}' bindinput='getCode' placeholder='验证码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <input id='username' disabled class='input msc' value='{{ code }}' bindinput='getCode' placeholder='验证码(暂时不填)' placeholder-style='color:#757575;font-size:32rpx;'></input>
       <image mode='widthFix' class='codeimg' bindtap='changeCode' src='{{ codeURL }}'></image>
     </view>
     <view class='input-group'>
       <text class='icon icon-msg'></text>
-      <input id='username' class='input msc' placeholder='短信验证码' placeholder-style='color:#757575;font-size:32rpx;'></input>
+      <input disabled id='username' class='input msc' placeholder='短信验证码(暂时不填)' placeholder-style='color:#757575;font-size:32rpx;'></input>
       <text class='sendCode' bindtap='sendMsgCode'>{{ msgcode }}</text>
     </view>
 

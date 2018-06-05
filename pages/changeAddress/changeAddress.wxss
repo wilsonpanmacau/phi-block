@@ -79,14 +79,11 @@
   flex: 1;
   text-align: center;
   line-height: 100rpx;
-  color: #348ce6;
-  letter-spacing: 5px;
-  font-size: 32rpx;
-}
-.a-btns>view:nth-child(2){
   color: #fff;
   background: #348ce6;
+  font-size: 32rpx;
 }
+
 .icon-a-select::after{
   content: '\e656';
 }

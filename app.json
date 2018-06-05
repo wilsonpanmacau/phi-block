@@ -1,5 +1,6 @@
 {
   "pages":[
+    
     "pages/home/home",
     "pages/changeAddress/changeAddress",
     "pages/me/me",

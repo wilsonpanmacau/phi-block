@@ -24,21 +24,12 @@
   <text>暂无收货地址</text>
 </view>
 
-<view class='a-btns' wx:if='{{ address.length !== 0}}'>
 
-  <view bindtap='deletea'>
-    <text>取消</text>
-  </view>
-  <view bindtap='submit_delete'>
-    <text>确认</text>
-  </view>
 
-</view>
-
-<view class='a-btns' wx:else>
+<view class='a-btns'>
   
   <view bindtap='add'>
-    <text>添加</text>
+    <text>新增收货地址</text>
   </view>
 
 </view>

@@ -134,7 +134,7 @@ Page({
   // 提交
   submit: function () {
     var _this = this;
-    if(this.data.phone === '' || this.data.code === '' || this.data.pwd === '' || this.data.repwd === '')    {
+    if(this.data.phone === ''  || this.data.pwd === '' || this.data.repwd === '')    {
       // 不能为空
       wx.showToast({
         title: '不能为空',
@@ -150,7 +150,7 @@ Page({
         data:{
           password:_this.data.pwd,
           phone:_this.data.phone,
-          captcha:_this.data.code
+          
         },
         success:function(res){
           // 接口调用成功

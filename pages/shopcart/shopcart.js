@@ -231,6 +231,10 @@ Page({
           _this.setData({
             products: res.data.data.products
           })
+        }else{
+          _this.setData({
+            products:[]
+          })
         }
       }
     })

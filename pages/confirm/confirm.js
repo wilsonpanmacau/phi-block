@@ -16,6 +16,12 @@ Page({
       url: '../c_addAddress/c_addAddress',
     })
   },
+  changeAddress:function(){
+    var _this = this;
+    wx.navigateTo({
+      url: '../changeAddress/changeAddress?addr_id='+_this.data.address.address_id,
+    })
+  },
   add:function(){
     var _this = this;
     var arr =[];
@@ -41,6 +47,7 @@ Page({
         wx.showToast({
           title: '购买成功',
           success:function(){
+            wx.removeStorageSync('addr');
             wx.redirectTo({
               url: '../order/order?type=0',
             })
@@ -67,6 +74,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log('load')
     var _this = this;
     
     this.setData({
@@ -96,8 +104,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('我回来了')
+    console.log('show')
     var _this = this;
+    // 首先从缓存获取地址
+    if(wx.getStorageSync('addr')!==''){
+      this.setData({
+        address: wx.getStorageSync('addr')
+      })
+
+      return ;
+    }
+
     // 获取地址
     // 获取默认地址
     wx.request({

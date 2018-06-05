@@ -7,12 +7,14 @@ Page({
   data: {
     address: [],
 
-    icons: []
+    icons: [],
+
+    select_id:-1
   },
   add: function () {
 
     wx.navigateTo({
-      url: '../addAddress/addAddress',
+      url: '../c_addAddress/c_addAddress',
     })
   },
   edit: function (e) {
@@ -29,56 +31,19 @@ Page({
   },
   // 删除操作
   submit_delete: function () {
-    var id_arr = [];
-    var _this = this;
-    for (let i = 0; i < this.data.icons.length; i++) {
-      if (this.data.icons[i].isSelect) {
-        id_arr.push(parseInt(this.data.address[i].address_id));
-      }
-    }
-    if (id_arr.length == 0) {
-      wx.showToast({
-        title: '未选择',
-        icon: 'none'
-      })
-      return;
-    } else {
-      wx.showLoading({
-        title: '删除中'
-      })
-      wx.request({
-        url: getApp().globalData.baseUrl + 'address/delete',
-        header: {
-          'content-type': 'application/x-www-form-urlencoded'
-        },
-        method: 'post',
-        data: {
-          user_id: wx.getStorageSync('info').user_id,
-          address_id: JSON.stringify(id_arr)
-        },
-        success: function (res) {
-          if (res.data.status) {
-            wx.hideLoading();
-          
-            _this.getAddress();
-        
-          } else {
-            wx.hideLoading();
-            wx.showToast({
-              title: res.data.msg,
-              icon: 'none'
-            })
-          }
-        }
-      })
-    }
-
+    wx.navigateBack({
+      delta:1
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      console.log(options.addr_id);
 
+      this.setData({
+        select_id: options.addr_id
+      })
   },
 
   /**
@@ -113,7 +78,12 @@ Page({
         var icons = [];
         console.log(res.data.data.addresses);
         for (let i = 0; i < res.data.data.addresses.length; i++) {
-          icons.push({ isSelect: false })
+          if (res.data.data.addresses[i].address_id == _this.data.select_id){
+            icons.push({ isSelect: true })
+          }else{
+            icons.push({ isSelect: false })
+          }
+          
         }
         _this.setData({
           address: res.data.data.addresses,
@@ -141,6 +111,21 @@ Page({
     this.setData({
       icons: arr
     })
+
+    for(let i =0 ; i<this.data.icons.length;i++){
+      if (this.data.icons[i].isSelect){
+
+        wx.setStorageSync('addr', this.data.address[i]);
+
+        wx.navigateBack({
+          delta: 1
+        })
+
+
+      }
+    }
+    
+
   },
   /**
    * 生命周期函数--监听页面隐藏
