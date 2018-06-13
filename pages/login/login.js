@@ -6,7 +6,8 @@ Page({
    */
   data: {
     phone:'',
-    pwd:''
+    pwd:'',
+    forward:''
   },
   // 输入手机号或者邮箱
   getPhone:function(e){
@@ -50,9 +51,16 @@ Page({
               title: "登录成功",
               duration:3000,
               complete:function(){
-                wx.reLaunch({
-                  url: '../home/home',
-                })
+                if(_this.data.forward == ''){
+                  wx.switchTab({
+                    url: '../home/home',
+                  })
+                }else{
+                  wx.switchTab({
+                    url: _this.data.forward,
+                  })
+                }
+                
               }
             })
           }else{
@@ -82,7 +90,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    if (options.forward !== undefined && options.forward !== null && options.forward!==''){
+      this.setData({
+        forward: options.forward
+      })
+    }
   },
 
   /**

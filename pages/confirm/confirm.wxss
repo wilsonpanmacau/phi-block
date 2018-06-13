@@ -212,4 +212,9 @@ checkbox-group{
 .icon-addr{
   left: 30rpx;
   font-size: 40rpx;
+  position:absolute;
+  top:50%;
+  font-family: 'iconfont';
+  font-style: normal;
+  transform:translate(0,-50%);
 }

@@ -31,6 +31,16 @@ Page({
       obj.count = this.data.list[i].count;
       arr.push(obj);
     }
+
+    if (this.data.address == null || this.data.address == ''){
+      wx.showToast({
+        title: '未选择地址',
+        icon:'none'
+        
+      })
+
+      return ;
+    }
     wx.request({
       url: getApp().globalData.baseUrl + 'order/add',
       method: 'POST',

@@ -16,6 +16,11 @@ Page({
     select:null,
   },
   choose:function(){
+    wx.showToast({
+      title: '功能未开放',
+      icon:'none'
+    })
+    return ;
     var _this = this;
     wx.chooseImage({
       count:1,

@@ -1,11 +1,18 @@
 <!--pages/shopcart/shopcart.wxml-->
-<block wx:if='{{ products.length === 0}}'>
+<block wx:if='{{ isLogin == null }}'>
+<view class='nothing'>
+  <text bindtap='goLogin' class='goLogin'>去登录</text>
+</view>
+
+</block>
+
+<block wx:if='{{ products.length === 0 && isLogin == "" }}'>
   <view class='nothing'>
     <text class='icon nothing-icon'></text>
     <text>你的购物车空空如也</text>
   </view>
 </block>
-<block wx:else>
+<block wx:if='{{ products.length !== 0 && isLogin == "" }}'>
   <scroll-view class='scroll' scroll-y='true'>
   <block wx:for='{{ products }}'>
 

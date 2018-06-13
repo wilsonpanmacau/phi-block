@@ -4,6 +4,7 @@
     <view class='item clearfix'>
       <text style='display:inline-block;padding-top:15rpx;'>头像</text>
       <image bindtap='choose' src='{{ src }}'></image>
+      
     </view>
     <view class='item'>
       <text>昵称</text>

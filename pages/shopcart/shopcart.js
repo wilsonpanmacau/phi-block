@@ -9,7 +9,8 @@ Page({
       
     ],
     isAllSelect:false,
-    total:"0"
+    total:"0",
+    isLogin:"",
   },
   // 下单
   gopay:function(){
@@ -201,14 +202,24 @@ Page({
   onReady: function () {
   
   },
-
+  goLogin:function(){
+    wx.navigateTo({
+      url: '../login/login?forward=' +"../shopcart/shopcart",
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
     if (wx.getStorageSync("info") == null || wx.getStorageSync("info") == '' || wx.getStorageSync("info") == undefined) {
-      
+      this.setData({
+        isLogin:null
+      })
       return;
+    }else{
+      this.setData({
+        isLogin: ""
+      })
     }
     var _this = this;
     console.log("购物车");

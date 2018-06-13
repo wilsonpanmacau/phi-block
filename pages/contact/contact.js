@@ -13,16 +13,7 @@ Page({
       id: 1,
       latitude: 31.02271,
       longitude: 121.15912,
-      callout:{
-        content:'上海斐讯数据通信技术有限公司',
-        color:'#fff',
-        fontSize:16,
-        borderColor:'#000',
-        borderRadius:5,
-        bgColor:'#000000',
-        padding:5,
-        display:'ALWAYS'
-      }
+      
     }],
   },
 

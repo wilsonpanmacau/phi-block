@@ -10,7 +10,7 @@
 
   <view wx:else class='address'>
       <text>暂无收货地址</text>
-      <text class='icon icon-addr'></text>
+      <text class='icon-addr'></text>
       <text bindtap='addAddress' style='float:right;'>添加</text><text bindtap='addAddress' class='icon icon-right'></text>
   </view>
 
@@ -28,12 +28,12 @@
     <textarea placeholder='备注信息' placeholder-style='font-size:14px;'></textarea>
   </view>
   <view class='gray'></view>
-  <view class='protocol'>
+  <!-- <view class='protocol'>
     <checkbox-group bindchange="checkboxChange">
       <checkbox color='#348ce6' value="{{check}}" checked="{{check}}"/>
     </checkbox-group>
     协议条款
-  </view>
+  </view> -->
 </scroll-view>
 <view class='bottom'>
   <view class='money'>

@@ -159,7 +159,14 @@ Page({
             // 注册成功
             wx.showToast({
               title: '注册成功',
+              duration:1000
             })
+            setTimeout(function(){
+              wx.navigateBack({
+                delta: 1
+              })
+            },1000)
+            
           }else{
             wx.showToast({
               title: res.data.msg,
